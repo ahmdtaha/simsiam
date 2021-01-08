@@ -14,7 +14,6 @@ class CIFAR10:
         img_size = 32
         trn_transform = common.get_aug(cfg,img_size,train=True,mean_std=cifar_mean_std)
         db_path = path_utils.get_datasets_dir(cfg.set)
-        cfg.logger.info('{} {} {}'.format('ImageNet',cfg.gpu,db_path))
         trn_dataset = torchvision.datasets.CIFAR10(db_path, train=True, transform=trn_transform, download=False)
         self.sampler = torch.utils.data.distributed.DistributedSampler(
             trn_dataset, rank=cfg.gpu, num_replicas=cfg.world_size, shuffle=True
@@ -57,7 +56,6 @@ class CIFAR100:
         img_size = 32
         trn_transform = common.get_aug(cfg,img_size,train=True,mean_std=cifar_mean_std)
         db_path = path_utils.get_datasets_dir(cfg.set)
-        cfg.logger.info('{} {} {}'.format('ImageNet',cfg.gpu,db_path))
         trn_dataset = torchvision.datasets.CIFAR100(db_path, train=True, transform=trn_transform, download=False)
         self.sampler = torch.utils.data.distributed.DistributedSampler(
             trn_dataset, rank=cfg.gpu-cfg.base_gpu, num_replicas=cfg.world_size, shuffle=True
