@@ -1,0 +1,154 @@
+2021-01-08 08:56:50,578 [INFO] train: => Creating model 'SimSiam'
+2021-01-08 08:56:50,741 [INFO] train: CIFAR Identity layer
+2021-01-08 08:56:50,780 [INFO] train: Moving the model to GPU 0
+2021-01-08 08:56:50,795 [INFO] train: Model conv 1 initialization 3.590662956237793
+2021-01-08 08:56:50,801 [INFO] train: Namespace(arch='SimSiam', backbone='resnet18', base_gpu=0, batch_size=512, config_file=None, data='/mnt/data/datasets/', emb_dim=2048, epochs=800, eval_tst=True, exp_dir='/mnt/data/checkpoints/simsiam/PRE_CIFAR10_SimSiam_resnet18_lr0_06_e800_bz512_NG1_default/', gpu=0, l2_norm=1, log_dir=None, log_file='train_0.txt', logger=<Logger train (DEBUG)>, lr=0.06, lr_decay_gamma=0.5, lr_decay_step=10, lr_policy='cosine_lr', momentum=0.9, multistep_lr_adjust=30, multistep_lr_gamma=0.1, name='PRE_CIFAR10_SimSiam_resnet18_lr0_06_e800_bz512_NG1_default/', num_cls=10, num_threads=16, optimizer='sgd', pretrained=None, print_freq=1000, resume='', save_every=1, seed=None, set='CIFAR10', start_epoch=None, test_interval=1, trainer='pretrain', trn_phase='pretrain', warm=1, warmup_length=0, weight_decay=0.0005, world_size=1)
+2021-01-08 08:56:50,801 [INFO] train: => Using trainer from trainers.pretrain
+2021-01-08 08:56:51,058 [INFO] train: Use GPU: 0 for training
+2021-01-08 08:56:51,058 [INFO] train: <DEBUG> gradient to module.backbone.conv1.weight
+2021-01-08 08:56:51,058 [INFO] train: <DEBUG> gradient to module.backbone.bn1.weight
+2021-01-08 08:56:51,058 [INFO] train: <DEBUG> gradient to module.backbone.bn1.bias
+2021-01-08 08:56:51,058 [INFO] train: <DEBUG> gradient to module.backbone.layer1.0.conv1.weight
+2021-01-08 08:56:51,058 [INFO] train: <DEBUG> gradient to module.backbone.layer1.0.bn1.weight
+2021-01-08 08:56:51,058 [INFO] train: <DEBUG> gradient to module.backbone.layer1.0.bn1.bias
+2021-01-08 08:56:51,058 [INFO] train: <DEBUG> gradient to module.backbone.layer1.0.conv2.weight
+2021-01-08 08:56:51,058 [INFO] train: <DEBUG> gradient to module.backbone.layer1.0.bn2.weight
+2021-01-08 08:56:51,058 [INFO] train: <DEBUG> gradient to module.backbone.layer1.0.bn2.bias
+2021-01-08 08:56:51,058 [INFO] train: <DEBUG> gradient to module.backbone.layer1.1.conv1.weight
+2021-01-08 08:56:51,058 [INFO] train: <DEBUG> gradient to module.backbone.layer1.1.bn1.weight
+2021-01-08 08:56:51,058 [INFO] train: <DEBUG> gradient to module.backbone.layer1.1.bn1.bias
+2021-01-08 08:56:51,059 [INFO] train: <DEBUG> gradient to module.backbone.layer1.1.conv2.weight
+2021-01-08 08:56:51,059 [INFO] train: <DEBUG> gradient to module.backbone.layer1.1.bn2.weight
+2021-01-08 08:56:51,059 [INFO] train: <DEBUG> gradient to module.backbone.layer1.1.bn2.bias
+2021-01-08 08:56:51,059 [INFO] train: <DEBUG> gradient to module.backbone.layer2.0.conv1.weight
+2021-01-08 08:56:51,059 [INFO] train: <DEBUG> gradient to module.backbone.layer2.0.bn1.weight
+2021-01-08 08:56:51,059 [INFO] train: <DEBUG> gradient to module.backbone.layer2.0.bn1.bias
+2021-01-08 08:56:51,059 [INFO] train: <DEBUG> gradient to module.backbone.layer2.0.conv2.weight
+2021-01-08 08:56:51,059 [INFO] train: <DEBUG> gradient to module.backbone.layer2.0.bn2.weight
+2021-01-08 08:56:51,059 [INFO] train: <DEBUG> gradient to module.backbone.layer2.0.bn2.bias
+2021-01-08 08:56:51,059 [INFO] train: <DEBUG> gradient to module.backbone.layer2.0.downsample.0.weight
+2021-01-08 08:56:51,059 [INFO] train: <DEBUG> gradient to module.backbone.layer2.0.downsample.1.weight
+2021-01-08 08:56:51,059 [INFO] train: <DEBUG> gradient to module.backbone.layer2.0.downsample.1.bias
+2021-01-08 08:56:51,059 [INFO] train: <DEBUG> gradient to module.backbone.layer2.1.conv1.weight
+2021-01-08 08:56:51,059 [INFO] train: <DEBUG> gradient to module.backbone.layer2.1.bn1.weight
+2021-01-08 08:56:51,059 [INFO] train: <DEBUG> gradient to module.backbone.layer2.1.bn1.bias
+2021-01-08 08:56:51,059 [INFO] train: <DEBUG> gradient to module.backbone.layer2.1.conv2.weight
+2021-01-08 08:56:51,059 [INFO] train: <DEBUG> gradient to module.backbone.layer2.1.bn2.weight
+2021-01-08 08:56:51,059 [INFO] train: <DEBUG> gradient to module.backbone.layer2.1.bn2.bias
+2021-01-08 08:56:51,059 [INFO] train: <DEBUG> gradient to module.backbone.layer3.0.conv1.weight
+2021-01-08 08:56:51,059 [INFO] train: <DEBUG> gradient to module.backbone.layer3.0.bn1.weight
+2021-01-08 08:56:51,059 [INFO] train: <DEBUG> gradient to module.backbone.layer3.0.bn1.bias
+2021-01-08 08:56:51,059 [INFO] train: <DEBUG> gradient to module.backbone.layer3.0.conv2.weight
+2021-01-08 08:56:51,060 [INFO] train: <DEBUG> gradient to module.backbone.layer3.0.bn2.weight
+2021-01-08 08:56:51,060 [INFO] train: <DEBUG> gradient to module.backbone.layer3.0.bn2.bias
+2021-01-08 08:56:51,060 [INFO] train: <DEBUG> gradient to module.backbone.layer3.0.downsample.0.weight
+2021-01-08 08:56:51,060 [INFO] train: <DEBUG> gradient to module.backbone.layer3.0.downsample.1.weight
+2021-01-08 08:56:51,060 [INFO] train: <DEBUG> gradient to module.backbone.layer3.0.downsample.1.bias
+2021-01-08 08:56:51,060 [INFO] train: <DEBUG> gradient to module.backbone.layer3.1.conv1.weight
+2021-01-08 08:56:51,060 [INFO] train: <DEBUG> gradient to module.backbone.layer3.1.bn1.weight
+2021-01-08 08:56:51,060 [INFO] train: <DEBUG> gradient to module.backbone.layer3.1.bn1.bias
+2021-01-08 08:56:51,060 [INFO] train: <DEBUG> gradient to module.backbone.layer3.1.conv2.weight
+2021-01-08 08:56:51,060 [INFO] train: <DEBUG> gradient to module.backbone.layer3.1.bn2.weight
+2021-01-08 08:56:51,060 [INFO] train: <DEBUG> gradient to module.backbone.layer3.1.bn2.bias
+2021-01-08 08:56:51,060 [INFO] train: <DEBUG> gradient to module.backbone.layer4.0.conv1.weight
+2021-01-08 08:56:51,060 [INFO] train: <DEBUG> gradient to module.backbone.layer4.0.bn1.weight
+2021-01-08 08:56:51,060 [INFO] train: <DEBUG> gradient to module.backbone.layer4.0.bn1.bias
+2021-01-08 08:56:51,060 [INFO] train: <DEBUG> gradient to module.backbone.layer4.0.conv2.weight
+2021-01-08 08:56:51,060 [INFO] train: <DEBUG> gradient to module.backbone.layer4.0.bn2.weight
+2021-01-08 08:56:51,060 [INFO] train: <DEBUG> gradient to module.backbone.layer4.0.bn2.bias
+2021-01-08 08:56:51,060 [INFO] train: <DEBUG> gradient to module.backbone.layer4.0.downsample.0.weight
+2021-01-08 08:56:51,060 [INFO] train: <DEBUG> gradient to module.backbone.layer4.0.downsample.1.weight
+2021-01-08 08:56:51,060 [INFO] train: <DEBUG> gradient to module.backbone.layer4.0.downsample.1.bias
+2021-01-08 08:56:51,060 [INFO] train: <DEBUG> gradient to module.backbone.layer4.1.conv1.weight
+2021-01-08 08:56:51,060 [INFO] train: <DEBUG> gradient to module.backbone.layer4.1.bn1.weight
+2021-01-08 08:56:51,060 [INFO] train: <DEBUG> gradient to module.backbone.layer4.1.bn1.bias
+2021-01-08 08:56:51,061 [INFO] train: <DEBUG> gradient to module.backbone.layer4.1.conv2.weight
+2021-01-08 08:56:51,061 [INFO] train: <DEBUG> gradient to module.backbone.layer4.1.bn2.weight
+2021-01-08 08:56:51,061 [INFO] train: <DEBUG> gradient to module.backbone.layer4.1.bn2.bias
+2021-01-08 08:56:51,061 [INFO] train: <DEBUG> gradient to module.projector.layer1.0.weight
+2021-01-08 08:56:51,061 [INFO] train: <DEBUG> gradient to module.projector.layer1.0.bias
+2021-01-08 08:56:51,061 [INFO] train: <DEBUG> gradient to module.projector.layer1.1.weight
+2021-01-08 08:56:51,061 [INFO] train: <DEBUG> gradient to module.projector.layer1.1.bias
+2021-01-08 08:56:51,061 [INFO] train: <DEBUG> gradient to module.projector.layer3.0.weight
+2021-01-08 08:56:51,061 [INFO] train: <DEBUG> gradient to module.projector.layer3.0.bias
+2021-01-08 08:56:51,061 [INFO] train: <DEBUG> gradient to module.projector.layer3.1.weight
+2021-01-08 08:56:51,061 [INFO] train: <DEBUG> gradient to module.projector.layer3.1.bias
+2021-01-08 08:56:51,061 [INFO] train: <DEBUG> gradient to module.predictor.layer1.0.weight
+2021-01-08 08:56:51,061 [INFO] train: <DEBUG> gradient to module.predictor.layer1.0.bias
+2021-01-08 08:56:51,061 [INFO] train: <DEBUG> gradient to module.predictor.layer1.1.weight
+2021-01-08 08:56:51,061 [INFO] train: <DEBUG> gradient to module.predictor.layer1.1.bias
+2021-01-08 08:56:51,061 [INFO] train: <DEBUG> gradient to module.predictor.layer2.weight
+2021-01-08 08:56:51,061 [INFO] train: <DEBUG> gradient to module.predictor.layer2.bias
+2021-01-08 08:56:51,062 [INFO] train: => Getting CIFAR10 dataset
+2021-01-08 08:56:51,062 [INFO] train: ImageNet 0 /mnt/data/datasets//cifar10
+2021-01-08 08:56:51,844 [INFO] train: Start Training: Model conv 1 initialization 3.590662956237793
+2021-01-08 08:56:51,844 [INFO] train: backbone.conv1 (Conv2d): torch.Size([64, 3, 3, 3])
+2021-01-08 08:56:51,844 [INFO] train: backbone.bn1 (BatchNorm2d): torch.Size([64])
+2021-01-08 08:56:51,844 [INFO] train: backbone.layer1.0.conv1 (Conv2d): torch.Size([64, 64, 3, 3])
+2021-01-08 08:56:51,844 [INFO] train: backbone.layer1.0.bn1 (BatchNorm2d): torch.Size([64])
+2021-01-08 08:56:51,844 [INFO] train: backbone.layer1.0.conv2 (Conv2d): torch.Size([64, 64, 3, 3])
+2021-01-08 08:56:51,844 [INFO] train: backbone.layer1.0.bn2 (BatchNorm2d): torch.Size([64])
+2021-01-08 08:56:51,844 [INFO] train: backbone.layer1.1.conv1 (Conv2d): torch.Size([64, 64, 3, 3])
+2021-01-08 08:56:51,844 [INFO] train: backbone.layer1.1.bn1 (BatchNorm2d): torch.Size([64])
+2021-01-08 08:56:51,844 [INFO] train: backbone.layer1.1.conv2 (Conv2d): torch.Size([64, 64, 3, 3])
+2021-01-08 08:56:51,845 [INFO] train: backbone.layer1.1.bn2 (BatchNorm2d): torch.Size([64])
+2021-01-08 08:56:51,845 [INFO] train: backbone.layer2.0.conv1 (Conv2d): torch.Size([128, 64, 3, 3])
+2021-01-08 08:56:51,845 [INFO] train: backbone.layer2.0.bn1 (BatchNorm2d): torch.Size([128])
+2021-01-08 08:56:51,845 [INFO] train: backbone.layer2.0.conv2 (Conv2d): torch.Size([128, 128, 3, 3])
+2021-01-08 08:56:51,845 [INFO] train: backbone.layer2.0.bn2 (BatchNorm2d): torch.Size([128])
+2021-01-08 08:56:51,845 [INFO] train: backbone.layer2.0.downsample.0 (Conv2d): torch.Size([128, 64, 1, 1])
+2021-01-08 08:56:51,845 [INFO] train: backbone.layer2.0.downsample.1 (BatchNorm2d): torch.Size([128])
+2021-01-08 08:56:51,845 [INFO] train: backbone.layer2.1.conv1 (Conv2d): torch.Size([128, 128, 3, 3])
+2021-01-08 08:56:51,845 [INFO] train: backbone.layer2.1.bn1 (BatchNorm2d): torch.Size([128])
+2021-01-08 08:56:51,845 [INFO] train: backbone.layer2.1.conv2 (Conv2d): torch.Size([128, 128, 3, 3])
+2021-01-08 08:56:51,845 [INFO] train: backbone.layer2.1.bn2 (BatchNorm2d): torch.Size([128])
+2021-01-08 08:56:51,845 [INFO] train: backbone.layer3.0.conv1 (Conv2d): torch.Size([256, 128, 3, 3])
+2021-01-08 08:56:51,845 [INFO] train: backbone.layer3.0.bn1 (BatchNorm2d): torch.Size([256])
+2021-01-08 08:56:51,845 [INFO] train: backbone.layer3.0.conv2 (Conv2d): torch.Size([256, 256, 3, 3])
+2021-01-08 08:56:51,845 [INFO] train: backbone.layer3.0.bn2 (BatchNorm2d): torch.Size([256])
+2021-01-08 08:56:51,845 [INFO] train: backbone.layer3.0.downsample.0 (Conv2d): torch.Size([256, 128, 1, 1])
+2021-01-08 08:56:51,845 [INFO] train: backbone.layer3.0.downsample.1 (BatchNorm2d): torch.Size([256])
+2021-01-08 08:56:51,845 [INFO] train: backbone.layer3.1.conv1 (Conv2d): torch.Size([256, 256, 3, 3])
+2021-01-08 08:56:51,845 [INFO] train: backbone.layer3.1.bn1 (BatchNorm2d): torch.Size([256])
+2021-01-08 08:56:51,845 [INFO] train: backbone.layer3.1.conv2 (Conv2d): torch.Size([256, 256, 3, 3])
+2021-01-08 08:56:51,845 [INFO] train: backbone.layer3.1.bn2 (BatchNorm2d): torch.Size([256])
+2021-01-08 08:56:51,845 [INFO] train: backbone.layer4.0.conv1 (Conv2d): torch.Size([512, 256, 3, 3])
+2021-01-08 08:56:51,845 [INFO] train: backbone.layer4.0.bn1 (BatchNorm2d): torch.Size([512])
+2021-01-08 08:56:51,846 [INFO] train: backbone.layer4.0.conv2 (Conv2d): torch.Size([512, 512, 3, 3])
+2021-01-08 08:56:51,846 [INFO] train: backbone.layer4.0.bn2 (BatchNorm2d): torch.Size([512])
+2021-01-08 08:56:51,846 [INFO] train: backbone.layer4.0.downsample.0 (Conv2d): torch.Size([512, 256, 1, 1])
+2021-01-08 08:56:51,846 [INFO] train: backbone.layer4.0.downsample.1 (BatchNorm2d): torch.Size([512])
+2021-01-08 08:56:51,846 [INFO] train: backbone.layer4.1.conv1 (Conv2d): torch.Size([512, 512, 3, 3])
+2021-01-08 08:56:51,846 [INFO] train: backbone.layer4.1.bn1 (BatchNorm2d): torch.Size([512])
+2021-01-08 08:56:51,846 [INFO] train: backbone.layer4.1.conv2 (Conv2d): torch.Size([512, 512, 3, 3])
+2021-01-08 08:56:51,846 [INFO] train: backbone.layer4.1.bn2 (BatchNorm2d): torch.Size([512])
+2021-01-08 08:56:51,846 [INFO] train: projector.layer1.0 (Linear): torch.Size([2048, 512])
+2021-01-08 08:56:51,846 [INFO] train: projector.layer1.1 (BatchNorm1d): torch.Size([2048])
+2021-01-08 08:56:51,846 [INFO] train: projector.layer3.0 (Linear): torch.Size([2048, 2048])
+2021-01-08 08:56:51,846 [INFO] train: projector.layer3.1 (BatchNorm1d): torch.Size([2048])
+2021-01-08 08:56:51,846 [INFO] train: predictor.layer1.0 (Linear): torch.Size([512, 2048])
+2021-01-08 08:56:51,846 [INFO] train: predictor.layer1.1 (BatchNorm1d): torch.Size([512])
+2021-01-08 08:56:51,846 [INFO] train: predictor.layer2 (Linear): torch.Size([2048, 512])
+2021-01-08 08:56:51,846 [INFO] train: Using Vanilla Criterion
+2021-01-08 08:56:55,967 [INFO] train: Epoch: [0][ 0/97]	Time  4.120 ( 4.120)	Data  2.266 ( 2.266)	Loss -0.004 (-0.004)
+2021-01-08 08:56:56,054 [INFO] root: Reducer buckets have been rebuilt in this iteration.
+2021-01-08 08:57:31,140 [INFO] train: Epoch: [0][96/97]	Time  0.381 ( 0.405)	Data  0.000 ( 0.024)	Loss -0.458 (-0.300)
+2021-01-08 08:57:44,154 [INFO] train: Finish the Trn Features -> Tst Features
+2021-01-08 08:57:51,873 [INFO] train: Acc 33.100328947368425
+2021-01-08 08:57:52,151 [INFO] train: ==> ETA: 13:24:05	GPU-M: 6243.5625	GPU-U: 3
+2021-01-08 08:57:52,151 [INFO] train: Overall Timing[0/1]	epoch_time 1.0051 (1.0051)	validation_time 0.3438 (0.3438)	train_time 0.6568 (0.6568)
+2021-01-08 08:57:54,331 [INFO] train: Epoch: [1][ 0/97]	Time  2.180 ( 2.180)	Data  2.035 ( 2.035)	Loss -0.450 (-0.450)
+2021-01-08 08:58:30,089 [INFO] train: Epoch: [1][96/97]	Time  0.378 ( 0.391)	Data  0.000 ( 0.023)	Loss -0.491 (-0.475)
+2021-01-08 08:58:43,169 [INFO] train: Finish the Trn Features -> Tst Features
+2021-01-08 08:58:50,799 [INFO] train: Acc 32.62746710526316
+2021-01-08 08:58:51,013 [INFO] train: ==> ETA: 13:03:50	GPU-M: 6243.5625	GPU-U: 2
+2021-01-08 08:58:51,013 [INFO] train: Overall Timing[1/1]	epoch_time 0.9810 (0.9931)	validation_time 0.3433 (0.3435)	train_time 0.6342 (0.6455)
+2021-01-08 08:58:53,947 [INFO] train: Epoch: [2][ 0/97]	Time  2.933 ( 2.933)	Data  2.792 ( 2.792)	Loss -0.474 (-0.474)
+2021-01-08 08:59:29,402 [INFO] train: Epoch: [2][96/97]	Time  0.373 ( 0.396)	Data  0.000 ( 0.029)	Loss -0.507 (-0.496)
+2021-01-08 08:59:42,612 [INFO] train: Finish the Trn Features -> Tst Features
+2021-01-08 08:59:50,325 [INFO] train: Acc 33.67598684210527
+2021-01-08 08:59:50,534 [INFO] train: ==> ETA: 13:11:38	GPU-M: 6243.5625	GPU-U: 4
+2021-01-08 08:59:50,534 [INFO] train: Overall Timing[2/1]	epoch_time 0.9920 (0.9927)	validation_time 0.3469 (0.3446)	train_time 0.6417 (0.6443)
+2021-01-08 08:59:52,804 [INFO] train: Epoch: [3][ 0/97]	Time  2.269 ( 2.269)	Data  2.127 ( 2.127)	Loss -0.489 (-0.489)
+2021-01-08 09:00:28,821 [INFO] train: Epoch: [3][96/97]	Time  0.372 ( 0.395)	Data  0.000 ( 0.022)	Loss -0.517 (-0.512)
+2021-01-08 09:00:41,992 [INFO] train: Finish the Trn Features -> Tst Features
