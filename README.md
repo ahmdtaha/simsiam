@@ -29,8 +29,8 @@ By default the code leverage DistributedDataParallel. The are two key parameters
 For example if a machine has four GPUs, and user sets world_size=3 and base_gpu=1, the model will be trained on the 2nd, 3rd and 4th GPUs.
 
 The code logs the training progress in two files
-* train_X.log -- assuming base_gpu=X -- contains text log of the training progress. There are sample log files inside ./sample_runs dir. These are incomplete runs.
-* exp_name.csv -- This csv files keep track of the KNN accuracy at each `--test_interval`
+* train_X.log: Assuming base_gpu=X, the file contains text log of the training progress. There are sample log files inside ./sample_runs dir. These are complete/incomplete runs.
+* exp_name.csv: This csv file keeps track of the KNN accuracy at each `--test_interval`
 ## Release History
 * 1.0.0
     * First commit on 8 Jan 2021
