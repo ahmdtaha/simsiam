@@ -1,11 +1,11 @@
 import os
 import sys
-import math
 import torch
 import random
-import constants
-import trn_pretrain
+import getpass
+import trn_classifier
 import logging.config
+import torch.nn as nn
 from utils import net_utils
 from utils import log_utils
 import torch.distributed as dist
@@ -36,14 +36,12 @@ def setup(rank, world_size,port):
         os.environ['MASTER_PORT'] = str(port)
 
         # initialize the process group
-        dist.init_process_group("nccl", rank=rank, world_size=world_size) ## nccl or gloo
+        dist.init_process_group("nccl", rank=rank, world_size=world_size)
 
 def cleanup():
     dist.destroy_process_group()
 
 def spawn_train(cfg):
-    # print(torch.cuda.nccl.version())
-    # mp.set_start_method("spawn")
     manager = mp.Manager()
     return_dict = manager.dict()
     jobs = []
@@ -67,93 +65,97 @@ def train_ddp(rank,cfg,return_dict):
     logging.config.dictConfig(log_utils.get_logging_dict(log_file, mode='a+'))
     cfg.logger = logging.getLogger('train')
 
-    model = net_utils.get_model(cfg)
+    cfg.logger.info('Getting the model')
+    pretrain_model = net_utils.get_model(cfg)
+    pretrain_model = torch.nn.DataParallel(pretrain_model)
+    if cfg.pretrained and cfg.pretrained != 'imagenet':
+        net_utils.load_pretrained(cfg.pretrained, cfg.gpu, pretrain_model, cfg)
+
+
+    classifier_layer = nn.Linear(in_features=pretrain_model.module.backbone.output_dim, out_features=cfg.num_cls,
+                                 bias=True).cuda()
+
+    for m in pretrain_model.parameters():
+        if hasattr(m, "requires_grad") and m.requires_grad is not None:
+            m.requires_grad = False
+    cfg.logger.info(
+        'Start Training: Model conv 1 initialization {}'.format(torch.sum(pretrain_model.module.backbone.conv1.weight)))
+    model = nn.Sequential(
+        pretrain_model.module.backbone,
+        classifier_layer,
+    )
+
     cfg.logger.info('Moving the model to GPU {}'.format(cfg.gpu))
     model = net_utils.move_model_to_gpu(cfg, model)
-    cfg.logger.info('Model conv 1 initialization {}'.format(torch.sum(model.backbone.conv1.weight)))
+    cfg.logger.info('Model conv 1 initialization {}'.format(torch.sum(model[0].conv1.weight)))
     if cfg.world_size > 1:
         model = torch.nn.SyncBatchNorm.convert_sync_batchnorm(model)
     model = DDP(model, device_ids=[cfg.gpu],output_device=cfg.gpu)
 
-    trn_pretrain.trn(cfg, model)
-
+    trn_classifier.trn(cfg,model)
     if cfg.gpu == cfg.base_gpu:
         return_dict['ckpt_path']= None
 
     cleanup()
 
+def main(arg_num_threads=8,num_gpus=1):
+    arg_dataset = 'CIFAR10'
+    arg_epochs = str(90)
+    arg_arch = 'SimSiam'
+    arg_backbone = 'resnet18'
 
-def main(arg_num_threads=16,num_gpus=1):
-    arg_dataset = 'CIFAR10' # CIFAR10,CIFAR100
+    arg_pretrained_model = '/mnt/data/checkpoints/simsiam/PRE_CIFAR10_SimSiam_resnet18_lr0_06_e800_bz512_NG4_default/gpu_0/0000/checkpoints/epoch_0799.state'
+    assert os.path.exists(arg_pretrained_model), 'Please provide a valid pretrained model'
+    exp_name_suffix = arg_pretrained_model.split('/')[5]
+    arg_exp_name = 'CLS_{}_{}_e{}_{}/'.format(arg_dataset,
+                                                               arg_arch,
+                                                               arg_epochs,
+                                                               exp_name_suffix)
 
-    if arg_dataset in ['CIFAR10','CIFAR100']:
-        arg_trainer = 'pretrain'
-        arg_epochs = str(800)
-        arg_test_interval = '1'
-        arg_bz = '512'
-        arg_backbone = 'resnet18'
-        arg_weight_decay = '5e-4'
-        arg_lr = str(0.06)
-        arg_base_gpu = '0'
-    else:
-        raise NotImplementedError('Invalid dataset {}'.format(arg_dataset))
-
-    arg_arch = 'SimSiam' # SimCLR, SimSiam
-
-
-    exp_name_suffix = 'default'
-    # exp_name_suffix = 'redo_debug'
-    arg_exp_name = 'PRE_{}_{}_{}_lr{}_e{}_bz{}_NG{}_{}/'.format(arg_dataset,
-                                               arg_arch,
-                                               arg_backbone,
-                                               arg_lr,
-                                               arg_epochs,
-                                               arg_bz,
-                                               num_gpus,
-                                               exp_name_suffix).replace('.','_')
-
-
+    arg_weight_decay = '0'
 
     if 'debug' in exp_name_suffix:
         arg_num_threads = 0
 
-    arg_dim = '2048' if arg_arch == 'SimSiam' else '512'
 
     argv = [
         '--name', arg_exp_name,
-        '--trn_phase','pretrain',
+        '--trn_phase', 'classification',
+        '--pretrained',arg_pretrained_model,
         '--num_threads', str(arg_num_threads),
-        '--base_gpu', arg_base_gpu,
-
+        '--gpu', '0',
         '--epochs', arg_epochs,
         '--arch', arg_arch,
-        '--emb_dim',arg_dim,
         '--backbone',arg_backbone,
         '--world_size', str(num_gpus),
-        "--test_interval",arg_test_interval,
-        '--save_every',arg_test_interval,
-        '--trainer', arg_trainer,
+        "--test_interval",'2',
+        '--save_every','2',
+        '--trainer', 'classification',
 
-        '--data', constants.dataset_dir ,
-        '--set', arg_dataset,
-
-        '--optimizer', 'sgd',
-        '--lr', arg_lr,
-
-        '--lr_policy', 'cosine_lr',
-        '--warmup_length', '0',
-
+        '--data', '/mnt/data/datasets/',
+        '--set', arg_dataset,  # Flower102, CUB200
         '--weight_decay', arg_weight_decay,
         '--momentum', '0.9',
-        '--batch_size', arg_bz,
+
+        # '--optimizer', 'lars',
+        # '--lr', '0.32',
+        # '--batch_size', '4096',
+
+        '--optimizer', 'sgd',
+        '--lr', '30',
+        '--batch_size', '256',
+
+        # '--lr_policy', 'step_lr',
+        # '--warmup_length', '5',
+
+        '--lr_policy', 'cosine_lr',
+        # '--warmup_length', '10',
 
     ]
 
     cfg = Config().parse(argv)
 
     assert cfg.epochs % 10 == 0 or 'debug' in cfg.name, 'Epoch should be divisible by 10'
-
-    cfg.num_threads = 16
 
     spawn_train(cfg)
 
