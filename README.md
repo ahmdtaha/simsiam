@@ -18,7 +18,7 @@ First update `constants.py` with your dataset dir and checkpoints dir
 
 To train a model `python pretrain_main.py` 
 
-To train a linear classifier `python classifier_main.py` -- I did not clean this yet.
+To train a linear classifier `python classifier_main.py` -- Make sure to update the path of the [pretrained model](https://github.com/ahmdtaha/simsiam/blob/1975eb6749cc06d1df2a781b4ed9c234ad008c40/classifier_main.py#L107) before running.
 
 The CIFAR hyperparameters are already hard coded in the python script. However these hyperparameters can be overridden by providing at least one parameter when running the script (e.g., `python pretrain_main.py --arch SimCLR`) 
 
@@ -48,7 +48,7 @@ The code logs the training progress in two files
 ### TODO LIST
 * Revise the readme file
 * Test pretrain_main.py with SimCLR
-* Add the `classifier_main.py`
+* ~~Add the `classifier_main.py`~~
 
 ## References
 [1] Chen, Xinlei and He, Kaiming. Representation Learning by Learning to Count. arXiv preprint arXiv:2011.10566 
