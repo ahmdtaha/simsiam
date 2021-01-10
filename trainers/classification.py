@@ -21,35 +21,26 @@ def train(train_loader, model, criterion, optimizer, epoch, cfg, writer):
         [batch_time, data_time, losses, top1, top5],cfg,
         prefix=f"Epoch: [{epoch}]",
     )
-
     # switch to train mode
     model.train()
-
     batch_size = train_loader.batch_size
     num_batches = train_loader.num_batches
     end = time.time()
-
     for i , data in enumerate(train_loader):
-        # images, target = data[0]['data'],data[0]['label'].long().squeeze()
         images, target = data[0].cuda(),data[1].long().squeeze().cuda()
         # measure data loading time
         data_time.update(time.time() - end)
 
-
-        batch_size = images.size(0)
-        loss_batch_size = batch_size
         #compute output
         output = model(images)
         loss = criterion(output, target)
         acc1, acc5 = accuracy(output, target, topk=(1, 5))
 
-        # print(i, batch_size, loss)
 
         # measure accuracy and record loss
-
-        losses.update(loss.item(), loss_batch_size)
-        top1.update(acc1.item(), loss_batch_size)
-        top5.update(acc5.item(), loss_batch_size)
+        losses.update(loss.item(), batch_size)
+        top1.update(acc1.item(), batch_size)
+        top5.update(acc5.item(), batch_size)
 
         # compute gradient and do SGD step
         optimizer.zero_grad()
@@ -78,38 +69,23 @@ def validate(val_loader, model, criterion, args, writer, epoch):
     progress = ProgressMeter(
         val_loader.num_batches, [batch_time, losses, top1, top5],args, prefix="Test: "
     )
-
     # switch to evaluate mode
     model.eval()
-
+    batch_size = val_loader.batch_size
     with torch.no_grad():
         end = time.time()
-
-        # confusion_matrix = torch.zeros(args.num_cls,args.num_cls)
         for i, data in enumerate(val_loader):
-            # images, target = data[0]['data'], data[0]['label'].long().squeeze()
             images, target = data[0].cuda(), data[1].long().squeeze().cuda()
-
-
-            # train_cls_loss += cls_loss.item()
-
-
-            # if i == 0:
-
             output = model(images)
             loss = criterion(output, target)
 
             # measure accuracy and record loss
             acc1, acc5 = accuracy(output, target, topk=(1, 5))
-            # print(target,torch.mean(images),acc1,acc5,loss,torch.mean(output))
-            losses.update(loss.item(), images.size(0))
-            top1.update(acc1.item(), images.size(0))
-            top5.update(acc5.item(), images.size(0))
 
+            losses.update(loss.item(), batch_size)
+            top1.update(acc1.item(), batch_size)
+            top5.update(acc5.item(), batch_size)
 
-            # _, preds = torch.max(output, 1)
-            # for t, p in zip(target.view(-1), preds.view(-1)):
-            #     confusion_matrix[t.long(), p.long()] += 1
 
             # measure elapsed time
             batch_time.update(time.time() - end)
@@ -125,6 +101,4 @@ def validate(val_loader, model, criterion, args, writer, epoch):
         if writer is not None:
             progress.write_to_tensorboard(writer, prefix="test", global_step=epoch)
 
-    # torch.save(confusion_matrix,'./conf_mat.pt')
-    # print(top1.count)
     return top1.avg, top5.avg

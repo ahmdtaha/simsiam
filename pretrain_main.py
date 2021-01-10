@@ -42,7 +42,7 @@ def cleanup():
     dist.destroy_process_group()
 
 def spawn_train(cfg):
-    print(torch.cuda.nccl.version())
+    # print(torch.cuda.nccl.version())
     # mp.set_start_method("spawn")
     manager = mp.Manager()
     return_dict = manager.dict()
