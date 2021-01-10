@@ -1,0 +1,477 @@
+2021-01-10 11:14:08,059 [INFO] train: Getting the model
+2021-01-10 11:14:08,060 [INFO] train: => Creating model 'SimSiam'
+2021-01-10 11:14:08,223 [INFO] train: CIFAR Identity layer
+2021-01-10 11:14:08,261 [INFO] train: => loading pretrained weights from '/mnt/data/checkpoints/simsiam/PRE_CIFAR10_SimSiam_resnet18_lr0_06_e800_bz512_NG4_default/gpu_0/0000/checkpoints/epoch_0799.state'
+2021-01-10 11:14:08,352 [INFO] train: Start Training: Model conv 1 initialization -0.4396619200706482
+2021-01-10 11:14:08,352 [INFO] train: Moving the model to GPU 0
+2021-01-10 11:14:08,363 [INFO] train: Model conv 1 initialization -0.43966197967529297
+2021-01-10 11:14:11,717 [INFO] train: Namespace(arch='SimSiam', backbone='resnet18', base_gpu=0, batch_size=256, config_file=None, data='/mnt/data/datasets/', emb_dim=2048, epochs=90, eval_tst=True, exp_dir='/mnt/data/checkpoints/simsiam/CLS_CIFAR10_SimSiam_e90_SGD_PRE_CIFAR10_SimSiam_resnet18_lr0_06_e800_bz512_NG4_default/', gpu=0, l2_norm=1, log_dir=None, log_file='train_0.txt', logger=<Logger train (DEBUG)>, lr=30.0, lr_decay_gamma=0.5, lr_decay_step=10, lr_policy='cosine_lr', momentum=0.9, multistep_lr_adjust=30, multistep_lr_gamma=0.1, name='CLS_CIFAR10_SimSiam_e90_SGD_PRE_CIFAR10_SimSiam_resnet18_lr0_06_e800_bz512_NG4_default/', num_cls=10, num_threads=8, optimizer='sgd', pretrained='/mnt/data/checkpoints/simsiam/PRE_CIFAR10_SimSiam_resnet18_lr0_06_e800_bz512_NG4_default/gpu_0/0000/checkpoints/epoch_0799.state', print_freq=1000, resume='', save_every=2, seed=None, set='CIFAR10', start_epoch=None, test_interval=2, trainer='classification', trn_phase='classification', warm=1, warmup_length=0, weight_decay=0.0, world_size=2)
+2021-01-10 11:14:11,717 [INFO] train: => Using trainer from trainers.classification
+2021-01-10 11:14:11,729 [INFO] train: Use GPU: 0 for training
+2021-01-10 11:14:11,729 [INFO] train: <DEBUG> gradient to weight
+2021-01-10 11:14:11,729 [INFO] train: <DEBUG> gradient to bias
+2021-01-10 11:14:11,729 [INFO] train: => Getting CIFAR10 dataset
+2021-01-10 11:14:12,600 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 0
+2021-01-10 11:14:13,328 [INFO] train: Epoch: [0][  0/195]	Time  0.727 ( 0.727)	Data  0.366 ( 0.366)	Loss 2.302 (2.302)	Acc@1  11.72 ( 11.72)	Acc@5  49.22 ( 49.22)
+2021-01-10 11:14:13,331 [INFO] root: Reducer buckets have been rebuilt in this iteration.
+2021-01-10 11:14:23,454 [INFO] train: Epoch: [0][194/195]	Time  0.019 ( 0.056)	Data  0.000 ( 0.020)	Loss 23.309 (32.041)	Acc@1  17.19 ( 14.57)	Acc@5  56.25 ( 55.81)
+2021-01-10 11:14:23,505 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 1
+2021-01-10 11:14:23,879 [INFO] train: Epoch: [1][  0/195]	Time  0.373 ( 0.373)	Data  0.348 ( 0.348)	Loss 17.249 (17.249)	Acc@1  25.78 ( 25.78)	Acc@5  70.31 ( 70.31)
+2021-01-10 11:14:34,257 [INFO] train: Epoch: [1][194/195]	Time  0.019 ( 0.055)	Data  0.000 ( 0.008)	Loss 0.571 (5.216)	Acc@1  85.16 ( 65.29)	Acc@5  96.88 ( 88.13)
+2021-01-10 11:14:34,767 [INFO] train: Test: [ 0/39]	Time  0.450 ( 0.450)	Loss 0.457 (0.457)	Acc@1  87.50 ( 87.50)	Acc@5  98.83 ( 98.83)
+2021-01-10 11:14:35,801 [INFO] train: Test: [39/39]	Time  0.026 ( 0.037)	Loss 0.641 (0.515)	Acc@1  81.25 ( 85.87)	Acc@5  98.44 ( 98.65)
+2021-01-10 11:14:35,802 [INFO] train: ==> best 85.87 saving at /mnt/data/checkpoints/simsiam/CLS_CIFAR10_SimSiam_e90_SGD_PRE_CIFAR10_SimSiam_resnet18_lr0_06_e800_bz512_NG4_default/gpu_0/0000/checkpoints/model_best.pth
+2021-01-10 11:14:35,915 [INFO] train: ==> ETA: 0:17:17	GPU-M: 1846.5625	GPU-U: 33
+2021-01-10 11:14:35,915 [INFO] train: Overall Timing[1/1]	epoch_time 0.3886 (0.3886)	validation_time 0.0248 (0.0248)	train_time 0.1802 (0.1810)
+2021-01-10 11:14:35,916 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 2
+2021-01-10 11:14:36,344 [INFO] train: Epoch: [2][  0/195]	Time  0.428 ( 0.428)	Data  0.275 ( 0.275)	Loss 0.457 (0.457)	Acc@1  86.72 ( 86.72)	Acc@5 100.00 (100.00)
+2021-01-10 11:14:46,662 [INFO] train: Epoch: [2][194/195]	Time  0.059 ( 0.055)	Data  0.036 ( 0.014)	Loss 0.522 (0.535)	Acc@1  87.50 ( 86.40)	Acc@5  98.44 ( 98.57)
+2021-01-10 11:14:46,712 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 3
+2021-01-10 11:14:47,152 [INFO] train: Epoch: [3][  0/195]	Time  0.440 ( 0.440)	Data  0.353 ( 0.353)	Loss 0.682 (0.682)	Acc@1  84.38 ( 84.38)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:14:57,117 [INFO] train: Epoch: [3][194/195]	Time  0.019 ( 0.053)	Data  0.000 ( 0.021)	Loss 0.589 (0.516)	Acc@1  84.38 ( 86.55)	Acc@5  99.22 ( 98.41)
+2021-01-10 11:14:57,323 [INFO] train: Test: [ 0/39]	Time  0.143 ( 0.143)	Loss 0.349 (0.349)	Acc@1  91.41 ( 91.41)	Acc@5  98.44 ( 98.44)
+2021-01-10 11:14:58,377 [INFO] train: Test: [39/39]	Time  0.026 ( 0.029)	Loss 0.501 (0.421)	Acc@1  84.38 ( 87.26)	Acc@5  98.44 ( 98.38)
+2021-01-10 11:14:58,378 [INFO] train: ==> best 87.26 saving at /mnt/data/checkpoints/simsiam/CLS_CIFAR10_SimSiam_e90_SGD_PRE_CIFAR10_SimSiam_resnet18_lr0_06_e800_bz512_NG4_default/gpu_0/0000/checkpoints/model_best.pth
+2021-01-10 11:14:58,714 [INFO] train: ==> ETA: 0:16:31	GPU-M: 1846.5625	GPU-U: 0
+2021-01-10 11:14:58,714 [INFO] train: Overall Timing[3/1]	epoch_time 0.3800 (0.3843)	validation_time 0.0200 (0.0224)	train_time 0.1745 (0.1791)
+2021-01-10 11:14:58,716 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 4
+2021-01-10 11:14:59,091 [INFO] train: Epoch: [4][  0/195]	Time  0.373 ( 0.373)	Data  0.349 ( 0.349)	Loss 0.601 (0.601)	Acc@1  84.38 ( 84.38)	Acc@5  97.66 ( 97.66)
+2021-01-10 11:15:09,509 [INFO] train: Epoch: [4][194/195]	Time  0.018 ( 0.055)	Data  0.000 ( 0.008)	Loss 0.577 (0.468)	Acc@1  87.50 ( 87.35)	Acc@5  97.66 ( 98.65)
+2021-01-10 11:15:09,564 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 5
+2021-01-10 11:15:09,957 [INFO] train: Epoch: [5][  0/195]	Time  0.393 ( 0.393)	Data  0.321 ( 0.321)	Loss 0.446 (0.446)	Acc@1  88.28 ( 88.28)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:15:20,359 [INFO] train: Epoch: [5][194/195]	Time  0.019 ( 0.055)	Data  0.000 ( 0.034)	Loss 0.310 (0.464)	Acc@1  89.84 ( 87.35)	Acc@5 100.00 ( 98.62)
+2021-01-10 11:15:20,555 [INFO] train: Test: [ 0/39]	Time  0.148 ( 0.148)	Loss 0.418 (0.418)	Acc@1  88.67 ( 88.67)	Acc@5  98.05 ( 98.05)
+2021-01-10 11:15:21,583 [INFO] train: Test: [39/39]	Time  0.026 ( 0.029)	Loss 0.516 (0.460)	Acc@1  82.81 ( 86.13)	Acc@5  98.44 ( 98.45)
+2021-01-10 11:15:21,678 [INFO] train: ==> ETA: 0:16:15	GPU-M: 1846.5625	GPU-U: 99
+2021-01-10 11:15:21,678 [INFO] train: Overall Timing[5/1]	epoch_time 0.3827 (0.3838)	validation_time 0.0196 (0.0215)	train_time 0.1807 (0.1796)
+2021-01-10 11:15:21,679 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 6
+2021-01-10 11:15:22,108 [INFO] train: Epoch: [6][  0/195]	Time  0.428 ( 0.428)	Data  0.349 ( 0.349)	Loss 0.573 (0.573)	Acc@1  82.03 ( 82.03)	Acc@5  98.44 ( 98.44)
+2021-01-10 11:15:32,410 [INFO] train: Epoch: [6][194/195]	Time  0.019 ( 0.055)	Data  0.000 ( 0.024)	Loss 0.360 (0.475)	Acc@1  88.28 ( 86.65)	Acc@5 100.00 ( 98.58)
+2021-01-10 11:15:32,469 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 7
+2021-01-10 11:15:32,909 [INFO] train: Epoch: [7][  0/195]	Time  0.439 ( 0.439)	Data  0.264 ( 0.264)	Loss 0.592 (0.592)	Acc@1  84.38 ( 84.38)	Acc@5  96.88 ( 96.88)
+2021-01-10 11:15:43,143 [INFO] train: Epoch: [7][194/195]	Time  0.019 ( 0.055)	Data  0.000 ( 0.012)	Loss 0.418 (0.443)	Acc@1  89.06 ( 87.41)	Acc@5 100.00 ( 98.79)
+2021-01-10 11:15:43,354 [INFO] train: Test: [ 0/39]	Time  0.148 ( 0.148)	Loss 0.315 (0.315)	Acc@1  91.02 ( 91.02)	Acc@5  99.61 ( 99.61)
+2021-01-10 11:15:44,384 [INFO] train: Test: [39/39]	Time  0.026 ( 0.029)	Loss 0.400 (0.369)	Acc@1  86.72 ( 88.08)	Acc@5  99.61 ( 99.21)
+2021-01-10 11:15:44,386 [INFO] train: ==> best 88.08 saving at /mnt/data/checkpoints/simsiam/CLS_CIFAR10_SimSiam_e90_SGD_PRE_CIFAR10_SimSiam_resnet18_lr0_06_e800_bz512_NG4_default/gpu_0/0000/checkpoints/model_best.pth
+2021-01-10 11:15:44,703 [INFO] train: ==> ETA: 0:15:56	GPU-M: 1846.5625	GPU-U: 0
+2021-01-10 11:15:44,703 [INFO] train: Overall Timing[7/1]	epoch_time 0.3837 (0.3838)	validation_time 0.0197 (0.0210)	train_time 0.1789 (0.1796)
+2021-01-10 11:15:44,704 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 8
+2021-01-10 11:15:45,152 [INFO] train: Epoch: [8][  0/195]	Time  0.447 ( 0.447)	Data  0.281 ( 0.281)	Loss 0.596 (0.596)	Acc@1  83.59 ( 83.59)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:15:55,392 [INFO] train: Epoch: [8][194/195]	Time  0.020 ( 0.055)	Data  0.000 ( 0.026)	Loss 0.406 (0.452)	Acc@1  88.28 ( 87.01)	Acc@5 100.00 ( 98.77)
+2021-01-10 11:15:55,448 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 9
+2021-01-10 11:15:55,906 [INFO] train: Epoch: [9][  0/195]	Time  0.456 ( 0.456)	Data  0.282 ( 0.282)	Loss 0.369 (0.369)	Acc@1  90.62 ( 90.62)	Acc@5  97.66 ( 97.66)
+2021-01-10 11:16:06,159 [INFO] train: Epoch: [9][194/195]	Time  0.019 ( 0.055)	Data  0.000 ( 0.025)	Loss 0.580 (0.437)	Acc@1  85.16 ( 87.19)	Acc@5  96.88 ( 98.82)
+2021-01-10 11:16:06,352 [INFO] train: Test: [ 0/39]	Time  0.140 ( 0.140)	Loss 0.422 (0.422)	Acc@1  87.50 ( 87.50)	Acc@5  98.83 ( 98.83)
+2021-01-10 11:16:07,386 [INFO] train: Test: [39/39]	Time  0.026 ( 0.029)	Loss 0.503 (0.471)	Acc@1  82.42 ( 85.53)	Acc@5  98.83 ( 98.58)
+2021-01-10 11:16:07,472 [INFO] train: ==> ETA: 0:15:22	GPU-M: 1846.5625	GPU-U: 78
+2021-01-10 11:16:07,472 [INFO] train: Overall Timing[9/1]	epoch_time 0.3795 (0.3829)	validation_time 0.0196 (0.0207)	train_time 0.1794 (0.1795)
+2021-01-10 11:16:07,473 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 10
+2021-01-10 11:16:07,893 [INFO] train: Epoch: [10][  0/195]	Time  0.419 ( 0.419)	Data  0.271 ( 0.271)	Loss 0.491 (0.491)	Acc@1  89.06 ( 89.06)	Acc@5  98.44 ( 98.44)
+2021-01-10 11:16:18,355 [INFO] train: Epoch: [10][194/195]	Time  0.019 ( 0.056)	Data  0.000 ( 0.023)	Loss 0.451 (0.438)	Acc@1  83.59 ( 87.58)	Acc@5  99.22 ( 98.74)
+2021-01-10 11:16:18,411 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 11
+2021-01-10 11:16:18,840 [INFO] train: Epoch: [11][  0/195]	Time  0.428 ( 0.428)	Data  0.255 ( 0.255)	Loss 0.612 (0.612)	Acc@1  80.47 ( 80.47)	Acc@5  98.44 ( 98.44)
+2021-01-10 11:16:29,087 [INFO] train: Epoch: [11][194/195]	Time  0.018 ( 0.055)	Data  0.000 ( 0.006)	Loss 0.370 (0.437)	Acc@1  88.28 ( 87.32)	Acc@5  98.44 ( 98.84)
+2021-01-10 11:16:29,270 [INFO] train: Test: [ 0/39]	Time  0.133 ( 0.133)	Loss 0.304 (0.304)	Acc@1  92.19 ( 92.19)	Acc@5  98.83 ( 98.83)
+2021-01-10 11:16:30,305 [INFO] train: Test: [39/39]	Time  0.026 ( 0.029)	Loss 0.412 (0.361)	Acc@1  87.11 ( 88.46)	Acc@5  99.22 ( 99.11)
+2021-01-10 11:16:30,306 [INFO] train: ==> best 88.46 saving at /mnt/data/checkpoints/simsiam/CLS_CIFAR10_SimSiam_e90_SGD_PRE_CIFAR10_SimSiam_resnet18_lr0_06_e800_bz512_NG4_default/gpu_0/0000/checkpoints/model_best.pth
+2021-01-10 11:16:30,608 [INFO] train: ==> ETA: 0:15:13	GPU-M: 1846.5625	GPU-U: 2
+2021-01-10 11:16:30,608 [INFO] train: Overall Timing[11/1]	epoch_time 0.3856 (0.3834)	validation_time 0.0195 (0.0205)	train_time 0.1787 (0.1797)
+2021-01-10 11:16:30,610 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 12
+2021-01-10 11:16:31,053 [INFO] train: Epoch: [12][  0/195]	Time  0.442 ( 0.442)	Data  0.361 ( 0.361)	Loss 0.306 (0.306)	Acc@1  89.84 ( 89.84)	Acc@5 100.00 (100.00)
+2021-01-10 11:16:41,293 [INFO] train: Epoch: [12][194/195]	Time  0.018 ( 0.055)	Data  0.000 ( 0.010)	Loss 0.424 (0.435)	Acc@1  91.41 ( 87.53)	Acc@5  98.44 ( 98.85)
+2021-01-10 11:16:41,369 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 13
+2021-01-10 11:16:41,764 [INFO] train: Epoch: [13][  0/195]	Time  0.393 ( 0.393)	Data  0.333 ( 0.333)	Loss 0.278 (0.278)	Acc@1  93.75 ( 93.75)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:16:51,949 [INFO] train: Epoch: [13][194/195]	Time  0.019 ( 0.054)	Data  0.000 ( 0.022)	Loss 0.448 (0.429)	Acc@1  85.94 ( 87.66)	Acc@5  98.44 ( 98.87)
+2021-01-10 11:16:52,138 [INFO] train: Test: [ 0/39]	Time  0.139 ( 0.139)	Loss 0.366 (0.366)	Acc@1  88.28 ( 88.28)	Acc@5  98.83 ( 98.83)
+2021-01-10 11:16:53,174 [INFO] train: Test: [39/39]	Time  0.026 ( 0.029)	Loss 0.404 (0.377)	Acc@1  86.72 ( 87.62)	Acc@5  99.61 ( 99.19)
+2021-01-10 11:16:53,261 [INFO] train: ==> ETA: 0:14:32	GPU-M: 1846.5625	GPU-U: 31
+2021-01-10 11:16:53,261 [INFO] train: Overall Timing[13/1]	epoch_time 0.3775 (0.3825)	validation_time 0.0196 (0.0204)	train_time 0.1771 (0.1795)
+2021-01-10 11:16:53,262 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 14
+2021-01-10 11:16:53,639 [INFO] train: Epoch: [14][  0/195]	Time  0.376 ( 0.376)	Data  0.352 ( 0.352)	Loss 0.492 (0.492)	Acc@1  85.16 ( 85.16)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:17:04,095 [INFO] train: Epoch: [14][194/195]	Time  0.019 ( 0.056)	Data  0.000 ( 0.026)	Loss 0.305 (0.405)	Acc@1  92.97 ( 88.13)	Acc@5 100.00 ( 98.96)
+2021-01-10 11:17:04,164 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 15
+2021-01-10 11:17:04,582 [INFO] train: Epoch: [15][  0/195]	Time  0.417 ( 0.417)	Data  0.274 ( 0.274)	Loss 0.447 (0.447)	Acc@1  84.38 ( 84.38)	Acc@5  98.44 ( 98.44)
+2021-01-10 11:17:14,860 [INFO] train: Epoch: [15][194/195]	Time  0.019 ( 0.055)	Data  0.000 ( 0.015)	Loss 0.304 (0.404)	Acc@1  86.72 ( 87.91)	Acc@5  99.22 ( 98.87)
+2021-01-10 11:17:15,062 [INFO] train: Test: [ 0/39]	Time  0.143 ( 0.143)	Loss 0.306 (0.306)	Acc@1  90.62 ( 90.62)	Acc@5  98.83 ( 98.83)
+2021-01-10 11:17:16,131 [INFO] train: Test: [39/39]	Time  0.026 ( 0.030)	Loss 0.372 (0.326)	Acc@1  88.67 ( 89.16)	Acc@5 100.00 ( 99.41)
+2021-01-10 11:17:16,132 [INFO] train: ==> best 89.16 saving at /mnt/data/checkpoints/simsiam/CLS_CIFAR10_SimSiam_e90_SGD_PRE_CIFAR10_SimSiam_resnet18_lr0_06_e800_bz512_NG4_default/gpu_0/0000/checkpoints/model_best.pth
+2021-01-10 11:17:16,464 [INFO] train: ==> ETA: 0:14:30	GPU-M: 1846.5625	GPU-U: 2
+2021-01-10 11:17:16,464 [INFO] train: Overall Timing[15/1]	epoch_time 0.3867 (0.3830)	validation_time 0.0202 (0.0204)	train_time 0.1792 (0.1796)
+2021-01-10 11:17:16,465 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 16
+2021-01-10 11:17:16,841 [INFO] train: Epoch: [16][  0/195]	Time  0.375 ( 0.375)	Data  0.352 ( 0.352)	Loss 0.231 (0.231)	Acc@1  92.19 ( 92.19)	Acc@5 100.00 (100.00)
+2021-01-10 11:17:27,157 [INFO] train: Epoch: [16][194/195]	Time  0.019 ( 0.055)	Data  0.000 ( 0.005)	Loss 0.393 (0.409)	Acc@1  89.84 ( 87.94)	Acc@5  99.22 ( 99.01)
+2021-01-10 11:17:27,215 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 17
+2021-01-10 11:17:27,650 [INFO] train: Epoch: [17][  0/195]	Time  0.434 ( 0.434)	Data  0.322 ( 0.322)	Loss 0.440 (0.440)	Acc@1  85.94 ( 85.94)	Acc@5 100.00 (100.00)
+2021-01-10 11:17:37,999 [INFO] train: Epoch: [17][194/195]	Time  0.089 ( 0.055)	Data  0.000 ( 0.004)	Loss 0.512 (0.389)	Acc@1  86.72 ( 88.35)	Acc@5 100.00 ( 99.04)
+2021-01-10 11:17:38,212 [INFO] train: Test: [ 0/39]	Time  0.157 ( 0.157)	Loss 0.279 (0.279)	Acc@1  92.58 ( 92.58)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:17:39,251 [INFO] train: Test: [39/39]	Time  0.026 ( 0.029)	Loss 0.355 (0.320)	Acc@1  89.06 ( 89.53)	Acc@5  99.61 ( 99.40)
+2021-01-10 11:17:39,252 [INFO] train: ==> best 89.53 saving at /mnt/data/checkpoints/simsiam/CLS_CIFAR10_SimSiam_e90_SGD_PRE_CIFAR10_SimSiam_resnet18_lr0_06_e800_bz512_NG4_default/gpu_0/0000/checkpoints/model_best.pth
+2021-01-10 11:17:39,609 [INFO] train: ==> ETA: 0:14:04	GPU-M: 1846.5625	GPU-U: 0
+2021-01-10 11:17:39,610 [INFO] train: Overall Timing[17/1]	epoch_time 0.3858 (0.3833)	validation_time 0.0200 (0.0203)	train_time 0.1807 (0.1796)
+2021-01-10 11:17:39,612 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 18
+2021-01-10 11:17:39,987 [INFO] train: Epoch: [18][  0/195]	Time  0.374 ( 0.374)	Data  0.353 ( 0.353)	Loss 0.354 (0.354)	Acc@1  89.84 ( 89.84)	Acc@5 100.00 (100.00)
+2021-01-10 11:17:50,477 [INFO] train: Epoch: [18][194/195]	Time  0.020 ( 0.056)	Data  0.000 ( 0.029)	Loss 0.303 (0.397)	Acc@1  90.62 ( 88.08)	Acc@5  99.22 ( 98.95)
+2021-01-10 11:17:50,523 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 19
+2021-01-10 11:17:50,926 [INFO] train: Epoch: [19][  0/195]	Time  0.402 ( 0.402)	Data  0.281 ( 0.281)	Loss 0.187 (0.187)	Acc@1  93.75 ( 93.75)	Acc@5 100.00 (100.00)
+2021-01-10 11:18:01,324 [INFO] train: Epoch: [19][194/195]	Time  0.073 ( 0.055)	Data  0.050 ( 0.018)	Loss 0.677 (0.389)	Acc@1  82.81 ( 88.12)	Acc@5  98.44 ( 99.03)
+2021-01-10 11:18:01,530 [INFO] train: Test: [ 0/39]	Time  0.145 ( 0.145)	Loss 0.278 (0.278)	Acc@1  92.97 ( 92.97)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:18:02,570 [INFO] train: Test: [39/39]	Time  0.026 ( 0.029)	Loss 0.375 (0.330)	Acc@1  86.72 ( 89.20)	Acc@5  99.22 ( 99.38)
+2021-01-10 11:18:02,656 [INFO] train: ==> ETA: 0:13:38	GPU-M: 1846.5625	GPU-U: 94
+2021-01-10 11:18:02,657 [INFO] train: Overall Timing[19/1]	epoch_time 0.3841 (0.3834)	validation_time 0.0198 (0.0203)	train_time 0.1810 (0.1798)
+2021-01-10 11:18:02,657 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 20
+2021-01-10 11:18:03,062 [INFO] train: Epoch: [20][  0/195]	Time  0.404 ( 0.404)	Data  0.292 ( 0.292)	Loss 0.402 (0.402)	Acc@1  85.16 ( 85.16)	Acc@5  98.44 ( 98.44)
+2021-01-10 11:18:13,368 [INFO] train: Epoch: [20][194/195]	Time  0.023 ( 0.055)	Data  0.000 ( 0.012)	Loss 0.400 (0.399)	Acc@1  86.72 ( 87.70)	Acc@5 100.00 ( 99.06)
+2021-01-10 11:18:13,509 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 21
+2021-01-10 11:18:13,901 [INFO] train: Epoch: [21][  0/195]	Time  0.391 ( 0.391)	Data  0.365 ( 0.365)	Loss 0.368 (0.368)	Acc@1  87.50 ( 87.50)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:18:24,448 [INFO] train: Epoch: [21][194/195]	Time  0.058 ( 0.056)	Data  0.000 ( 0.026)	Loss 0.448 (0.399)	Acc@1  89.84 ( 88.04)	Acc@5  99.22 ( 98.96)
+2021-01-10 11:18:24,649 [INFO] train: Test: [ 0/39]	Time  0.141 ( 0.141)	Loss 0.301 (0.301)	Acc@1  89.84 ( 89.84)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:18:25,687 [INFO] train: Test: [39/39]	Time  0.026 ( 0.029)	Loss 0.344 (0.317)	Acc@1  87.11 ( 89.64)	Acc@5 100.00 ( 99.44)
+2021-01-10 11:18:25,688 [INFO] train: ==> best 89.64 saving at /mnt/data/checkpoints/simsiam/CLS_CIFAR10_SimSiam_e90_SGD_PRE_CIFAR10_SimSiam_resnet18_lr0_06_e800_bz512_NG4_default/gpu_0/0000/checkpoints/model_best.pth
+2021-01-10 11:18:26,031 [INFO] train: ==> ETA: 0:13:26	GPU-M: 1846.5625	GPU-U: 0
+2021-01-10 11:18:26,032 [INFO] train: Overall Timing[21/1]	epoch_time 0.3896 (0.3840)	validation_time 0.0197 (0.0202)	train_time 0.1833 (0.1800)
+2021-01-10 11:18:26,033 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 22
+2021-01-10 11:18:26,473 [INFO] train: Epoch: [22][  0/195]	Time  0.439 ( 0.439)	Data  0.262 ( 0.262)	Loss 0.375 (0.375)	Acc@1  87.50 ( 87.50)	Acc@5 100.00 (100.00)
+2021-01-10 11:18:36,825 [INFO] train: Epoch: [22][194/195]	Time  0.019 ( 0.055)	Data  0.000 ( 0.010)	Loss 0.387 (0.383)	Acc@1  88.28 ( 88.12)	Acc@5  99.22 ( 99.09)
+2021-01-10 11:18:36,894 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 23
+2021-01-10 11:18:37,321 [INFO] train: Epoch: [23][  0/195]	Time  0.427 ( 0.427)	Data  0.283 ( 0.283)	Loss 0.398 (0.398)	Acc@1  84.38 ( 84.38)	Acc@5 100.00 (100.00)
+2021-01-10 11:18:47,643 [INFO] train: Epoch: [23][194/195]	Time  0.091 ( 0.055)	Data  0.010 ( 0.003)	Loss 0.312 (0.397)	Acc@1  92.19 ( 87.89)	Acc@5 100.00 ( 99.06)
+2021-01-10 11:18:47,850 [INFO] train: Test: [ 0/39]	Time  0.145 ( 0.145)	Loss 0.281 (0.281)	Acc@1  91.80 ( 91.80)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:18:48,890 [INFO] train: Test: [39/39]	Time  0.026 ( 0.029)	Loss 0.327 (0.297)	Acc@1  87.89 ( 90.10)	Acc@5 100.00 ( 99.52)
+2021-01-10 11:18:48,891 [INFO] train: ==> best 90.10 saving at /mnt/data/checkpoints/simsiam/CLS_CIFAR10_SimSiam_e90_SGD_PRE_CIFAR10_SimSiam_resnet18_lr0_06_e800_bz512_NG4_default/gpu_0/0000/checkpoints/model_best.pth
+2021-01-10 11:18:49,225 [INFO] train: ==> ETA: 0:12:56	GPU-M: 1846.5625	GPU-U: 2
+2021-01-10 11:18:49,225 [INFO] train: Overall Timing[23/1]	epoch_time 0.3865 (0.3842)	validation_time 0.0198 (0.0202)	train_time 0.1802 (0.1801)
+2021-01-10 11:18:49,226 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 24
+2021-01-10 11:18:49,687 [INFO] train: Epoch: [24][  0/195]	Time  0.460 ( 0.460)	Data  0.287 ( 0.287)	Loss 0.319 (0.319)	Acc@1  90.62 ( 90.62)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:19:00,163 [INFO] train: Epoch: [24][194/195]	Time  0.019 ( 0.056)	Data  0.000 ( 0.006)	Loss 0.397 (0.372)	Acc@1  85.16 ( 88.57)	Acc@5  98.44 ( 99.10)
+2021-01-10 11:19:00,227 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 25
+2021-01-10 11:19:00,608 [INFO] train: Epoch: [25][  0/195]	Time  0.380 ( 0.380)	Data  0.296 ( 0.296)	Loss 0.324 (0.324)	Acc@1  89.84 ( 89.84)	Acc@5 100.00 (100.00)
+2021-01-10 11:19:11,016 [INFO] train: Epoch: [25][194/195]	Time  0.019 ( 0.055)	Data  0.000 ( 0.026)	Loss 0.299 (0.385)	Acc@1  87.50 ( 88.24)	Acc@5  99.22 ( 99.04)
+2021-01-10 11:19:11,221 [INFO] train: Test: [ 0/39]	Time  0.143 ( 0.143)	Loss 0.285 (0.285)	Acc@1  92.97 ( 92.97)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:19:12,259 [INFO] train: Test: [39/39]	Time  0.026 ( 0.029)	Loss 0.384 (0.334)	Acc@1  87.11 ( 88.96)	Acc@5  98.44 ( 99.11)
+2021-01-10 11:19:12,346 [INFO] train: ==> ETA: 0:12:31	GPU-M: 1846.5625	GPU-U: 25
+2021-01-10 11:19:12,346 [INFO] train: Overall Timing[25/1]	epoch_time 0.3853 (0.3843)	validation_time 0.0197 (0.0201)	train_time 0.1808 (0.1802)
+2021-01-10 11:19:12,347 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 26
+2021-01-10 11:19:12,720 [INFO] train: Epoch: [26][  0/195]	Time  0.372 ( 0.372)	Data  0.349 ( 0.349)	Loss 0.357 (0.357)	Acc@1  88.28 ( 88.28)	Acc@5 100.00 (100.00)
+2021-01-10 11:19:23,214 [INFO] train: Epoch: [26][194/195]	Time  0.019 ( 0.056)	Data  0.000 ( 0.031)	Loss 0.362 (0.386)	Acc@1  89.06 ( 88.06)	Acc@5 100.00 ( 99.02)
+2021-01-10 11:19:23,281 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 27
+2021-01-10 11:19:23,756 [INFO] train: Epoch: [27][  0/195]	Time  0.474 ( 0.474)	Data  0.356 ( 0.356)	Loss 0.242 (0.242)	Acc@1  90.62 ( 90.62)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:19:33,871 [INFO] train: Epoch: [27][194/195]	Time  0.021 ( 0.054)	Data  0.001 ( 0.008)	Loss 0.346 (0.390)	Acc@1  85.94 ( 87.99)	Acc@5 100.00 ( 99.06)
+2021-01-10 11:19:34,075 [INFO] train: Test: [ 0/39]	Time  0.143 ( 0.143)	Loss 0.283 (0.283)	Acc@1  92.19 ( 92.19)	Acc@5  99.61 ( 99.61)
+2021-01-10 11:19:35,130 [INFO] train: Test: [39/39]	Time  0.026 ( 0.029)	Loss 0.366 (0.315)	Acc@1  87.11 ( 89.67)	Acc@5  99.61 ( 99.43)
+2021-01-10 11:19:35,207 [INFO] train: ==> ETA: 0:12:00	GPU-M: 1846.5625	GPU-U: 85
+2021-01-10 11:19:35,207 [INFO] train: Overall Timing[27/1]	epoch_time 0.3810 (0.3841)	validation_time 0.0200 (0.0201)	train_time 0.1775 (0.1802)
+2021-01-10 11:19:35,209 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 28
+2021-01-10 11:19:35,648 [INFO] train: Epoch: [28][  0/195]	Time  0.438 ( 0.438)	Data  0.362 ( 0.362)	Loss 0.369 (0.369)	Acc@1  86.72 ( 86.72)	Acc@5  98.44 ( 98.44)
+2021-01-10 11:19:45,981 [INFO] train: Epoch: [28][194/195]	Time  0.021 ( 0.055)	Data  0.000 ( 0.009)	Loss 0.529 (0.378)	Acc@1  83.59 ( 88.51)	Acc@5  98.44 ( 99.06)
+2021-01-10 11:19:46,043 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 29
+2021-01-10 11:19:46,472 [INFO] train: Epoch: [29][  0/195]	Time  0.428 ( 0.428)	Data  0.302 ( 0.302)	Loss 0.278 (0.278)	Acc@1  93.75 ( 93.75)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:19:56,893 [INFO] train: Epoch: [29][194/195]	Time  0.019 ( 0.056)	Data  0.000 ( 0.022)	Loss 0.226 (0.375)	Acc@1  92.19 ( 88.45)	Acc@5  99.22 ( 99.08)
+2021-01-10 11:19:57,099 [INFO] train: Test: [ 0/39]	Time  0.144 ( 0.144)	Loss 0.309 (0.309)	Acc@1  91.41 ( 91.41)	Acc@5  98.44 ( 98.44)
+2021-01-10 11:19:58,139 [INFO] train: Test: [39/39]	Time  0.026 ( 0.029)	Loss 0.363 (0.323)	Acc@1  87.89 ( 89.50)	Acc@5  99.61 ( 99.23)
+2021-01-10 11:19:58,228 [INFO] train: ==> ETA: 0:11:42	GPU-M: 1846.5625	GPU-U: 30
+2021-01-10 11:19:58,228 [INFO] train: Overall Timing[29/1]	epoch_time 0.3837 (0.3840)	validation_time 0.0197 (0.0201)	train_time 0.1818 (0.1803)
+2021-01-10 11:19:58,229 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 30
+2021-01-10 11:19:58,685 [INFO] train: Epoch: [30][  0/195]	Time  0.455 ( 0.455)	Data  0.341 ( 0.341)	Loss 0.526 (0.526)	Acc@1  83.59 ( 83.59)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:20:09,039 [INFO] train: Epoch: [30][194/195]	Time  0.024 ( 0.055)	Data  0.000 ( 0.006)	Loss 0.284 (0.382)	Acc@1  89.06 ( 88.18)	Acc@5 100.00 ( 99.11)
+2021-01-10 11:20:09,091 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 31
+2021-01-10 11:20:09,597 [INFO] train: Epoch: [31][  0/195]	Time  0.505 ( 0.505)	Data  0.279 ( 0.279)	Loss 0.255 (0.255)	Acc@1  90.62 ( 90.62)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:20:19,866 [INFO] train: Epoch: [31][194/195]	Time  0.055 ( 0.055)	Data  0.000 ( 0.003)	Loss 0.485 (0.359)	Acc@1  87.50 ( 88.69)	Acc@5  97.66 ( 99.21)
+2021-01-10 11:20:20,064 [INFO] train: Test: [ 0/39]	Time  0.142 ( 0.142)	Loss 0.361 (0.361)	Acc@1  91.02 ( 91.02)	Acc@5  98.05 ( 98.05)
+2021-01-10 11:20:21,105 [INFO] train: Test: [39/39]	Time  0.026 ( 0.029)	Loss 0.394 (0.377)	Acc@1  87.89 ( 88.21)	Acc@5  98.83 ( 98.85)
+2021-01-10 11:20:21,193 [INFO] train: ==> ETA: 0:11:17	GPU-M: 1846.5625	GPU-U: 63
+2021-01-10 11:20:21,193 [INFO] train: Overall Timing[31/1]	epoch_time 0.3827 (0.3839)	validation_time 0.0197 (0.0201)	train_time 0.1805 (0.1803)
+2021-01-10 11:20:21,194 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 32
+2021-01-10 11:20:21,624 [INFO] train: Epoch: [32][  0/195]	Time  0.430 ( 0.430)	Data  0.347 ( 0.347)	Loss 0.224 (0.224)	Acc@1  92.97 ( 92.97)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:20:31,796 [INFO] train: Epoch: [32][194/195]	Time  0.020 ( 0.054)	Data  0.002 ( 0.007)	Loss 0.402 (0.373)	Acc@1  85.94 ( 88.47)	Acc@5  98.44 ( 99.11)
+2021-01-10 11:20:31,844 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 33
+2021-01-10 11:20:32,228 [INFO] train: Epoch: [33][  0/195]	Time  0.383 ( 0.383)	Data  0.357 ( 0.357)	Loss 0.343 (0.343)	Acc@1  88.28 ( 88.28)	Acc@5  98.44 ( 98.44)
+2021-01-10 11:20:42,721 [INFO] train: Epoch: [33][194/195]	Time  0.021 ( 0.056)	Data  0.000 ( 0.029)	Loss 0.391 (0.365)	Acc@1  89.06 ( 88.73)	Acc@5  98.44 ( 99.23)
+2021-01-10 11:20:42,917 [INFO] train: Test: [ 0/39]	Time  0.138 ( 0.138)	Loss 0.287 (0.287)	Acc@1  92.19 ( 92.19)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:20:43,955 [INFO] train: Test: [39/39]	Time  0.026 ( 0.029)	Loss 0.358 (0.325)	Acc@1  88.28 ( 89.26)	Acc@5  99.61 ( 99.31)
+2021-01-10 11:20:44,039 [INFO] train: ==> ETA: 0:10:51	GPU-M: 1846.5625	GPU-U: 99
+2021-01-10 11:20:44,039 [INFO] train: Overall Timing[33/1]	epoch_time 0.3808 (0.3838)	validation_time 0.0196 (0.0201)	train_time 0.1822 (0.1803)
+2021-01-10 11:20:44,040 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 34
+2021-01-10 11:20:44,464 [INFO] train: Epoch: [34][  0/195]	Time  0.423 ( 0.423)	Data  0.270 ( 0.270)	Loss 0.248 (0.248)	Acc@1  90.62 ( 90.62)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:20:54,956 [INFO] train: Epoch: [34][194/195]	Time  0.020 ( 0.056)	Data  0.000 ( 0.031)	Loss 0.206 (0.363)	Acc@1  93.75 ( 88.66)	Acc@5 100.00 ( 99.08)
+2021-01-10 11:20:55,008 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 35
+2021-01-10 11:20:55,470 [INFO] train: Epoch: [35][  0/195]	Time  0.461 ( 0.461)	Data  0.355 ( 0.355)	Loss 0.324 (0.324)	Acc@1  89.06 ( 89.06)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:21:05,843 [INFO] train: Epoch: [35][194/195]	Time  0.019 ( 0.056)	Data  0.000 ( 0.025)	Loss 0.336 (0.357)	Acc@1  89.06 ( 88.94)	Acc@5 100.00 ( 99.28)
+2021-01-10 11:21:06,042 [INFO] train: Test: [ 0/39]	Time  0.141 ( 0.141)	Loss 0.314 (0.314)	Acc@1  90.62 ( 90.62)	Acc@5  98.83 ( 98.83)
+2021-01-10 11:21:07,083 [INFO] train: Test: [39/39]	Time  0.026 ( 0.029)	Loss 0.350 (0.321)	Acc@1  88.67 ( 89.08)	Acc@5  99.61 ( 99.49)
+2021-01-10 11:21:07,171 [INFO] train: ==> ETA: 0:10:36	GPU-M: 1846.5625	GPU-U: 99
+2021-01-10 11:21:07,172 [INFO] train: Overall Timing[35/1]	epoch_time 0.3855 (0.3839)	validation_time 0.0197 (0.0200)	train_time 0.1815 (0.1804)
+2021-01-10 11:21:07,172 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 36
+2021-01-10 11:21:07,564 [INFO] train: Epoch: [36][  0/195]	Time  0.391 ( 0.391)	Data  0.351 ( 0.351)	Loss 0.334 (0.334)	Acc@1  89.06 ( 89.06)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:21:17,918 [INFO] train: Epoch: [36][194/195]	Time  0.019 ( 0.055)	Data  0.000 ( 0.012)	Loss 0.255 (0.370)	Acc@1  91.41 ( 88.55)	Acc@5 100.00 ( 99.19)
+2021-01-10 11:21:17,982 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 37
+2021-01-10 11:21:18,364 [INFO] train: Epoch: [37][  0/195]	Time  0.381 ( 0.381)	Data  0.347 ( 0.347)	Loss 0.453 (0.453)	Acc@1  86.72 ( 86.72)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:21:28,872 [INFO] train: Epoch: [37][194/195]	Time  0.020 ( 0.056)	Data  0.000 ( 0.019)	Loss 0.387 (0.374)	Acc@1  88.28 ( 88.43)	Acc@5  99.22 ( 99.12)
+2021-01-10 11:21:29,083 [INFO] train: Test: [ 0/39]	Time  0.147 ( 0.147)	Loss 0.291 (0.291)	Acc@1  91.02 ( 91.02)	Acc@5  98.83 ( 98.83)
+2021-01-10 11:21:30,142 [INFO] train: Test: [39/39]	Time  0.026 ( 0.029)	Loss 0.358 (0.330)	Acc@1  87.89 ( 88.96)	Acc@5  99.22 ( 99.38)
+2021-01-10 11:21:30,230 [INFO] train: ==> ETA: 0:10:11	GPU-M: 1846.5625	GPU-U: 66
+2021-01-10 11:21:30,230 [INFO] train: Overall Timing[37/1]	epoch_time 0.3843 (0.3839)	validation_time 0.0201 (0.0200)	train_time 0.1826 (0.1804)
+2021-01-10 11:21:30,231 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 38
+2021-01-10 11:21:30,587 [INFO] train: Epoch: [38][  0/195]	Time  0.356 ( 0.356)	Data  0.331 ( 0.331)	Loss 0.422 (0.422)	Acc@1  87.50 ( 87.50)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:21:40,957 [INFO] train: Epoch: [38][194/195]	Time  0.021 ( 0.055)	Data  0.000 ( 0.013)	Loss 0.424 (0.365)	Acc@1  84.38 ( 88.65)	Acc@5  99.22 ( 99.14)
+2021-01-10 11:21:41,016 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 39
+2021-01-10 11:21:41,483 [INFO] train: Epoch: [39][  0/195]	Time  0.466 ( 0.466)	Data  0.341 ( 0.341)	Loss 0.351 (0.351)	Acc@1  87.50 ( 87.50)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:21:51,691 [INFO] train: Epoch: [39][194/195]	Time  0.078 ( 0.055)	Data  0.054 ( 0.023)	Loss 0.364 (0.358)	Acc@1  87.50 ( 88.55)	Acc@5  99.22 ( 99.29)
+2021-01-10 11:21:51,908 [INFO] train: Test: [ 0/39]	Time  0.147 ( 0.147)	Loss 0.296 (0.296)	Acc@1  91.41 ( 91.41)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:21:52,954 [INFO] train: Test: [39/39]	Time  0.026 ( 0.029)	Loss 0.344 (0.333)	Acc@1  89.06 ( 88.86)	Acc@5  99.61 ( 99.48)
+2021-01-10 11:21:53,026 [INFO] train: ==> ETA: 0:09:41	GPU-M: 1846.5625	GPU-U: 99
+2021-01-10 11:21:53,026 [INFO] train: Overall Timing[39/1]	epoch_time 0.3799 (0.3837)	validation_time 0.0199 (0.0200)	train_time 0.1791 (0.1804)
+2021-01-10 11:21:53,027 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 40
+2021-01-10 11:21:53,488 [INFO] train: Epoch: [40][  0/195]	Time  0.460 ( 0.460)	Data  0.273 ( 0.273)	Loss 0.453 (0.453)	Acc@1  91.41 ( 91.41)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:22:03,856 [INFO] train: Epoch: [40][194/195]	Time  0.026 ( 0.056)	Data  0.000 ( 0.002)	Loss 0.402 (0.369)	Acc@1  87.50 ( 88.68)	Acc@5  99.22 ( 99.17)
+2021-01-10 11:22:03,902 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 41
+2021-01-10 11:22:04,355 [INFO] train: Epoch: [41][  0/195]	Time  0.452 ( 0.452)	Data  0.355 ( 0.355)	Loss 0.436 (0.436)	Acc@1  87.50 ( 87.50)	Acc@5  97.66 ( 97.66)
+2021-01-10 11:22:14,898 [INFO] train: Epoch: [41][194/195]	Time  0.083 ( 0.056)	Data  0.000 ( 0.016)	Loss 0.280 (0.357)	Acc@1  88.28 ( 88.81)	Acc@5 100.00 ( 99.29)
+2021-01-10 11:22:15,122 [INFO] train: Test: [ 0/39]	Time  0.151 ( 0.151)	Loss 0.276 (0.276)	Acc@1  91.80 ( 91.80)	Acc@5  99.61 ( 99.61)
+2021-01-10 11:22:16,178 [INFO] train: Test: [39/39]	Time  0.026 ( 0.029)	Loss 0.350 (0.322)	Acc@1  88.67 ( 89.26)	Acc@5  99.61 ( 99.42)
+2021-01-10 11:22:16,267 [INFO] train: ==> ETA: 0:09:29	GPU-M: 1846.5625	GPU-U: 95
+2021-01-10 11:22:16,267 [INFO] train: Overall Timing[41/1]	epoch_time 0.3873 (0.3839)	validation_time 0.0201 (0.0200)	train_time 0.1845 (0.1805)
+2021-01-10 11:22:16,268 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 42
+2021-01-10 11:22:16,633 [INFO] train: Epoch: [42][  0/195]	Time  0.365 ( 0.365)	Data  0.344 ( 0.344)	Loss 0.297 (0.297)	Acc@1  91.41 ( 91.41)	Acc@5 100.00 (100.00)
+2021-01-10 11:22:26,971 [INFO] train: Epoch: [42][194/195]	Time  0.021 ( 0.055)	Data  0.000 ( 0.010)	Loss 0.479 (0.362)	Acc@1  84.38 ( 88.77)	Acc@5  99.22 ( 99.17)
+2021-01-10 11:22:27,024 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 43
+2021-01-10 11:22:27,412 [INFO] train: Epoch: [43][  0/195]	Time  0.388 ( 0.388)	Data  0.337 ( 0.337)	Loss 0.299 (0.299)	Acc@1  89.84 ( 89.84)	Acc@5 100.00 (100.00)
+2021-01-10 11:22:37,745 [INFO] train: Epoch: [43][194/195]	Time  0.019 ( 0.055)	Data  0.000 ( 0.032)	Loss 0.357 (0.352)	Acc@1  90.62 ( 88.95)	Acc@5  99.22 ( 99.32)
+2021-01-10 11:22:37,935 [INFO] train: Test: [ 0/39]	Time  0.140 ( 0.140)	Loss 0.292 (0.292)	Acc@1  90.23 ( 90.23)	Acc@5  98.83 ( 98.83)
+2021-01-10 11:22:38,981 [INFO] train: Test: [39/39]	Time  0.026 ( 0.029)	Loss 0.376 (0.332)	Acc@1  87.11 ( 88.76)	Acc@5  98.83 ( 99.27)
+2021-01-10 11:22:39,058 [INFO] train: ==> ETA: 0:08:55	GPU-M: 1846.5625	GPU-U: 99
+2021-01-10 11:22:39,058 [INFO] train: Overall Timing[43/1]	epoch_time 0.3799 (0.3837)	validation_time 0.0198 (0.0200)	train_time 0.1795 (0.1804)
+2021-01-10 11:22:39,059 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 44
+2021-01-10 11:22:39,512 [INFO] train: Epoch: [44][  0/195]	Time  0.452 ( 0.452)	Data  0.342 ( 0.342)	Loss 0.507 (0.507)	Acc@1  85.16 ( 85.16)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:22:49,758 [INFO] train: Epoch: [44][194/195]	Time  0.021 ( 0.055)	Data  0.000 ( 0.017)	Loss 0.241 (0.349)	Acc@1  93.75 ( 88.84)	Acc@5 100.00 ( 99.22)
+2021-01-10 11:22:49,817 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 45
+2021-01-10 11:22:50,205 [INFO] train: Epoch: [45][  0/195]	Time  0.388 ( 0.388)	Data  0.353 ( 0.353)	Loss 0.419 (0.419)	Acc@1  90.62 ( 90.62)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:23:00,558 [INFO] train: Epoch: [45][194/195]	Time  0.019 ( 0.055)	Data  0.000 ( 0.009)	Loss 0.311 (0.350)	Acc@1  90.62 ( 88.90)	Acc@5  99.22 ( 99.29)
+2021-01-10 11:23:00,794 [INFO] train: Test: [ 0/39]	Time  0.167 ( 0.167)	Loss 0.282 (0.282)	Acc@1  93.75 ( 93.75)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:23:01,845 [INFO] train: Test: [39/39]	Time  0.026 ( 0.030)	Loss 0.341 (0.304)	Acc@1  87.50 ( 89.97)	Acc@5  99.61 ( 99.52)
+2021-01-10 11:23:01,933 [INFO] train: ==> ETA: 0:08:34	GPU-M: 1846.5625	GPU-U: 75
+2021-01-10 11:23:01,934 [INFO] train: Overall Timing[45/1]	epoch_time 0.3813 (0.3836)	validation_time 0.0203 (0.0200)	train_time 0.1802 (0.1804)
+2021-01-10 11:23:01,934 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 46
+2021-01-10 11:23:02,365 [INFO] train: Epoch: [46][  0/195]	Time  0.430 ( 0.430)	Data  0.350 ( 0.350)	Loss 0.367 (0.367)	Acc@1  88.28 ( 88.28)	Acc@5 100.00 (100.00)
+2021-01-10 11:23:12,804 [INFO] train: Epoch: [46][194/195]	Time  0.080 ( 0.056)	Data  0.059 ( 0.009)	Loss 0.414 (0.348)	Acc@1  89.06 ( 88.91)	Acc@5 100.00 ( 99.27)
+2021-01-10 11:23:12,856 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 47
+2021-01-10 11:23:13,325 [INFO] train: Epoch: [47][  0/195]	Time  0.469 ( 0.469)	Data  0.345 ( 0.345)	Loss 0.289 (0.289)	Acc@1  92.19 ( 92.19)	Acc@5 100.00 (100.00)
+2021-01-10 11:23:23,890 [INFO] train: Epoch: [47][194/195]	Time  0.023 ( 0.057)	Data  0.000 ( 0.004)	Loss 0.340 (0.351)	Acc@1  89.06 ( 89.06)	Acc@5  99.22 ( 99.24)
+2021-01-10 11:23:24,091 [INFO] train: Test: [ 0/39]	Time  0.142 ( 0.142)	Loss 0.284 (0.284)	Acc@1  91.41 ( 91.41)	Acc@5  99.61 ( 99.61)
+2021-01-10 11:23:25,132 [INFO] train: Test: [39/39]	Time  0.026 ( 0.029)	Loss 0.336 (0.315)	Acc@1  89.84 ( 89.57)	Acc@5  99.22 ( 99.47)
+2021-01-10 11:23:25,220 [INFO] train: ==> ETA: 0:08:20	GPU-M: 1846.5625	GPU-U: 99
+2021-01-10 11:23:25,220 [INFO] train: Overall Timing[47/1]	epoch_time 0.3881 (0.3838)	validation_time 0.0197 (0.0200)	train_time 0.1849 (0.1805)
+2021-01-10 11:23:25,221 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 48
+2021-01-10 11:23:25,594 [INFO] train: Epoch: [48][  0/195]	Time  0.373 ( 0.373)	Data  0.348 ( 0.348)	Loss 0.302 (0.302)	Acc@1  90.62 ( 90.62)	Acc@5  98.44 ( 98.44)
+2021-01-10 11:23:36,064 [INFO] train: Epoch: [48][194/195]	Time  0.078 ( 0.056)	Data  0.000 ( 0.015)	Loss 0.342 (0.347)	Acc@1  89.06 ( 89.07)	Acc@5  98.44 ( 99.25)
+2021-01-10 11:23:36,130 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 49
+2021-01-10 11:23:36,561 [INFO] train: Epoch: [49][  0/195]	Time  0.430 ( 0.430)	Data  0.335 ( 0.335)	Loss 0.442 (0.442)	Acc@1  87.50 ( 87.50)	Acc@5  97.66 ( 97.66)
+2021-01-10 11:23:47,048 [INFO] train: Epoch: [49][194/195]	Time  0.025 ( 0.056)	Data  0.000 ( 0.008)	Loss 0.413 (0.332)	Acc@1  89.06 ( 89.39)	Acc@5  99.22 ( 99.37)
+2021-01-10 11:23:47,245 [INFO] train: Test: [ 0/39]	Time  0.143 ( 0.143)	Loss 0.292 (0.292)	Acc@1  92.58 ( 92.58)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:23:48,289 [INFO] train: Test: [39/39]	Time  0.026 ( 0.029)	Loss 0.344 (0.320)	Acc@1  89.06 ( 89.31)	Acc@5  99.61 ( 99.46)
+2021-01-10 11:23:48,376 [INFO] train: ==> ETA: 0:07:54	GPU-M: 1846.5625	GPU-U: 48
+2021-01-10 11:23:48,376 [INFO] train: Overall Timing[49/1]	epoch_time 0.3859 (0.3838)	validation_time 0.0198 (0.0200)	train_time 0.1829 (0.1806)
+2021-01-10 11:23:48,377 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 50
+2021-01-10 11:23:48,758 [INFO] train: Epoch: [50][  0/195]	Time  0.381 ( 0.381)	Data  0.357 ( 0.357)	Loss 0.263 (0.263)	Acc@1  91.41 ( 91.41)	Acc@5 100.00 (100.00)
+2021-01-10 11:23:59,305 [INFO] train: Epoch: [50][194/195]	Time  0.019 ( 0.056)	Data  0.000 ( 0.033)	Loss 0.241 (0.344)	Acc@1  91.41 ( 89.10)	Acc@5  99.22 ( 99.31)
+2021-01-10 11:23:59,359 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 51
+2021-01-10 11:23:59,798 [INFO] train: Epoch: [51][  0/195]	Time  0.439 ( 0.439)	Data  0.272 ( 0.272)	Loss 0.579 (0.579)	Acc@1  87.50 ( 87.50)	Acc@5  97.66 ( 97.66)
+2021-01-10 11:24:10,233 [INFO] train: Epoch: [51][194/195]	Time  0.020 ( 0.056)	Data  0.000 ( 0.025)	Loss 0.379 (0.347)	Acc@1  85.16 ( 89.19)	Acc@5  99.22 ( 99.23)
+2021-01-10 11:24:10,430 [INFO] train: Test: [ 0/39]	Time  0.137 ( 0.137)	Loss 0.268 (0.268)	Acc@1  91.80 ( 91.80)	Acc@5  99.61 ( 99.61)
+2021-01-10 11:24:11,478 [INFO] train: Test: [39/39]	Time  0.026 ( 0.029)	Loss 0.337 (0.305)	Acc@1  89.45 ( 89.79)	Acc@5  99.22 ( 99.44)
+2021-01-10 11:24:11,566 [INFO] train: ==> ETA: 0:07:32	GPU-M: 1846.5625	GPU-U: 99
+2021-01-10 11:24:11,566 [INFO] train: Overall Timing[51/1]	epoch_time 0.3865 (0.3839)	validation_time 0.0198 (0.0200)	train_time 0.1822 (0.1807)
+2021-01-10 11:24:11,567 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 52
+2021-01-10 11:24:11,948 [INFO] train: Epoch: [52][  0/195]	Time  0.380 ( 0.380)	Data  0.357 ( 0.357)	Loss 0.328 (0.328)	Acc@1  88.28 ( 88.28)	Acc@5 100.00 (100.00)
+2021-01-10 11:24:22,433 [INFO] train: Epoch: [52][194/195]	Time  0.024 ( 0.056)	Data  0.000 ( 0.032)	Loss 0.373 (0.338)	Acc@1  89.06 ( 88.99)	Acc@5 100.00 ( 99.33)
+2021-01-10 11:24:22,484 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 53
+2021-01-10 11:24:22,946 [INFO] train: Epoch: [53][  0/195]	Time  0.461 ( 0.461)	Data  0.286 ( 0.286)	Loss 0.643 (0.643)	Acc@1  79.69 ( 79.69)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:24:33,141 [INFO] train: Epoch: [53][194/195]	Time  0.032 ( 0.055)	Data  0.000 ( 0.004)	Loss 0.304 (0.344)	Acc@1  89.84 ( 89.07)	Acc@5 100.00 ( 99.32)
+2021-01-10 11:24:33,342 [INFO] train: Test: [ 0/39]	Time  0.141 ( 0.141)	Loss 0.271 (0.271)	Acc@1  92.58 ( 92.58)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:24:34,384 [INFO] train: Test: [39/39]	Time  0.027 ( 0.029)	Loss 0.340 (0.301)	Acc@1  87.50 ( 89.97)	Acc@5  99.22 ( 99.56)
+2021-01-10 11:24:34,472 [INFO] train: ==> ETA: 0:07:03	GPU-M: 1846.5625	GPU-U: 99
+2021-01-10 11:24:34,472 [INFO] train: Overall Timing[53/1]	epoch_time 0.3818 (0.3839)	validation_time 0.0197 (0.0200)	train_time 0.1786 (0.1807)
+2021-01-10 11:24:34,473 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 54
+2021-01-10 11:24:34,894 [INFO] train: Epoch: [54][  0/195]	Time  0.421 ( 0.421)	Data  0.339 ( 0.339)	Loss 0.321 (0.321)	Acc@1  89.84 ( 89.84)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:24:45,137 [INFO] train: Epoch: [54][194/195]	Time  0.019 ( 0.055)	Data  0.000 ( 0.021)	Loss 0.256 (0.347)	Acc@1  89.84 ( 88.92)	Acc@5  99.22 ( 99.28)
+2021-01-10 11:24:45,201 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 55
+2021-01-10 11:24:45,596 [INFO] train: Epoch: [55][  0/195]	Time  0.393 ( 0.393)	Data  0.355 ( 0.355)	Loss 0.490 (0.490)	Acc@1  86.72 ( 86.72)	Acc@5  98.44 ( 98.44)
+2021-01-10 11:24:55,987 [INFO] train: Epoch: [55][194/195]	Time  0.021 ( 0.055)	Data  0.000 ( 0.011)	Loss 0.318 (0.343)	Acc@1  89.06 ( 89.00)	Acc@5  99.22 ( 99.31)
+2021-01-10 11:24:56,184 [INFO] train: Test: [ 0/39]	Time  0.140 ( 0.140)	Loss 0.269 (0.269)	Acc@1  92.97 ( 92.97)	Acc@5  98.83 ( 98.83)
+2021-01-10 11:24:57,227 [INFO] train: Test: [39/39]	Time  0.026 ( 0.029)	Loss 0.342 (0.318)	Acc@1  88.67 ( 89.25)	Acc@5  99.61 ( 99.45)
+2021-01-10 11:24:57,314 [INFO] train: ==> ETA: 0:06:39	GPU-M: 1846.5625	GPU-U: 39
+2021-01-10 11:24:57,315 [INFO] train: Overall Timing[55/1]	epoch_time 0.3807 (0.3838)	validation_time 0.0197 (0.0200)	train_time 0.1807 (0.1806)
+2021-01-10 11:24:57,315 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 56
+2021-01-10 11:24:57,753 [INFO] train: Epoch: [56][  0/195]	Time  0.437 ( 0.437)	Data  0.368 ( 0.368)	Loss 0.547 (0.547)	Acc@1  82.81 ( 82.81)	Acc@5 100.00 (100.00)
+2021-01-10 11:25:07,890 [INFO] train: Epoch: [56][194/195]	Time  0.020 ( 0.054)	Data  0.001 ( 0.023)	Loss 0.346 (0.337)	Acc@1  89.06 ( 89.33)	Acc@5 100.00 ( 99.37)
+2021-01-10 11:25:07,942 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 57
+2021-01-10 11:25:08,418 [INFO] train: Epoch: [57][  0/195]	Time  0.476 ( 0.476)	Data  0.357 ( 0.357)	Loss 0.299 (0.299)	Acc@1  90.62 ( 90.62)	Acc@5 100.00 (100.00)
+2021-01-10 11:25:18,671 [INFO] train: Epoch: [57][194/195]	Time  0.062 ( 0.055)	Data  0.040 ( 0.029)	Loss 0.243 (0.330)	Acc@1  93.75 ( 89.44)	Acc@5 100.00 ( 99.30)
+2021-01-10 11:25:18,870 [INFO] train: Test: [ 0/39]	Time  0.142 ( 0.142)	Loss 0.266 (0.266)	Acc@1  91.80 ( 91.80)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:25:19,913 [INFO] train: Test: [39/39]	Time  0.026 ( 0.029)	Loss 0.344 (0.301)	Acc@1  88.28 ( 89.80)	Acc@5  99.61 ( 99.56)
+2021-01-10 11:25:20,002 [INFO] train: ==> ETA: 0:06:14	GPU-M: 1846.5625	GPU-U: 95
+2021-01-10 11:25:20,002 [INFO] train: Overall Timing[57/1]	epoch_time 0.3781 (0.3836)	validation_time 0.0198 (0.0200)	train_time 0.1798 (0.1806)
+2021-01-10 11:25:20,003 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 58
+2021-01-10 11:25:20,384 [INFO] train: Epoch: [58][  0/195]	Time  0.380 ( 0.380)	Data  0.271 ( 0.271)	Loss 0.197 (0.197)	Acc@1  94.53 ( 94.53)	Acc@5 100.00 (100.00)
+2021-01-10 11:25:30,633 [INFO] train: Epoch: [58][194/195]	Time  0.019 ( 0.055)	Data  0.000 ( 0.021)	Loss 0.374 (0.339)	Acc@1  88.28 ( 89.11)	Acc@5  99.22 ( 99.38)
+2021-01-10 11:25:30,700 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 59
+2021-01-10 11:25:31,179 [INFO] train: Epoch: [59][  0/195]	Time  0.477 ( 0.477)	Data  0.333 ( 0.333)	Loss 0.330 (0.330)	Acc@1  86.72 ( 86.72)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:25:41,523 [INFO] train: Epoch: [59][194/195]	Time  0.021 ( 0.055)	Data  0.000 ( 0.009)	Loss 0.383 (0.329)	Acc@1  85.94 ( 89.45)	Acc@5 100.00 ( 99.45)
+2021-01-10 11:25:41,731 [INFO] train: Test: [ 0/39]	Time  0.146 ( 0.146)	Loss 0.269 (0.269)	Acc@1  92.19 ( 92.19)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:25:42,776 [INFO] train: Test: [39/39]	Time  0.026 ( 0.029)	Loss 0.333 (0.299)	Acc@1  89.84 ( 89.77)	Acc@5  99.61 ( 99.57)
+2021-01-10 11:25:42,863 [INFO] train: ==> ETA: 0:05:54	GPU-M: 1846.5625	GPU-U: 46
+2021-01-10 11:25:42,863 [INFO] train: Overall Timing[59/1]	epoch_time 0.3810 (0.3835)	validation_time 0.0199 (0.0200)	train_time 0.1814 (0.1805)
+2021-01-10 11:25:42,864 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 60
+2021-01-10 11:25:43,239 [INFO] train: Epoch: [60][  0/195]	Time  0.374 ( 0.374)	Data  0.350 ( 0.350)	Loss 0.378 (0.378)	Acc@1  88.28 ( 88.28)	Acc@5  97.66 ( 97.66)
+2021-01-10 11:25:53,607 [INFO] train: Epoch: [60][194/195]	Time  0.091 ( 0.055)	Data  0.068 ( 0.008)	Loss 0.194 (0.330)	Acc@1  92.97 ( 89.37)	Acc@5 100.00 ( 99.33)
+2021-01-10 11:25:53,666 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 61
+2021-01-10 11:25:54,090 [INFO] train: Epoch: [61][  0/195]	Time  0.424 ( 0.424)	Data  0.340 ( 0.340)	Loss 0.458 (0.458)	Acc@1  87.50 ( 87.50)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:26:04,341 [INFO] train: Epoch: [61][194/195]	Time  0.062 ( 0.055)	Data  0.000 ( 0.025)	Loss 0.300 (0.321)	Acc@1  90.62 ( 89.66)	Acc@5 100.00 ( 99.38)
+2021-01-10 11:26:04,549 [INFO] train: Test: [ 0/39]	Time  0.140 ( 0.140)	Loss 0.275 (0.275)	Acc@1  91.80 ( 91.80)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:26:05,590 [INFO] train: Test: [39/39]	Time  0.026 ( 0.029)	Loss 0.323 (0.298)	Acc@1  90.23 ( 89.82)	Acc@5  99.61 ( 99.58)
+2021-01-10 11:26:05,687 [INFO] train: ==> ETA: 0:05:30	GPU-M: 1846.5625	GPU-U: 87
+2021-01-10 11:26:05,687 [INFO] train: Overall Timing[61/1]	epoch_time 0.3804 (0.3834)	validation_time 0.0197 (0.0200)	train_time 0.1790 (0.1805)
+2021-01-10 11:26:05,688 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 62
+2021-01-10 11:26:06,066 [INFO] train: Epoch: [62][  0/195]	Time  0.377 ( 0.377)	Data  0.352 ( 0.352)	Loss 0.481 (0.481)	Acc@1  85.16 ( 85.16)	Acc@5  98.44 ( 98.44)
+2021-01-10 11:26:16,418 [INFO] train: Epoch: [62][194/195]	Time  0.021 ( 0.055)	Data  0.000 ( 0.018)	Loss 0.448 (0.337)	Acc@1  83.59 ( 89.19)	Acc@5 100.00 ( 99.36)
+2021-01-10 11:26:16,477 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 63
+2021-01-10 11:26:16,928 [INFO] train: Epoch: [63][  0/195]	Time  0.450 ( 0.450)	Data  0.264 ( 0.264)	Loss 0.483 (0.483)	Acc@1  86.72 ( 86.72)	Acc@5  98.44 ( 98.44)
+2021-01-10 11:26:27,242 [INFO] train: Epoch: [63][194/195]	Time  0.092 ( 0.055)	Data  0.069 ( 0.021)	Loss 0.320 (0.327)	Acc@1  89.06 ( 89.43)	Acc@5 100.00 ( 99.43)
+2021-01-10 11:26:27,449 [INFO] train: Test: [ 0/39]	Time  0.136 ( 0.136)	Loss 0.265 (0.265)	Acc@1  92.19 ( 92.19)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:26:28,507 [INFO] train: Test: [39/39]	Time  0.026 ( 0.029)	Loss 0.323 (0.296)	Acc@1  87.89 ( 89.96)	Acc@5 100.00 ( 99.55)
+2021-01-10 11:26:28,594 [INFO] train: ==> ETA: 0:05:09	GPU-M: 1846.5625	GPU-U: 77
+2021-01-10 11:26:28,594 [INFO] train: Overall Timing[63/1]	epoch_time 0.3818 (0.3833)	validation_time 0.0199 (0.0200)	train_time 0.1806 (0.1805)
+2021-01-10 11:26:28,595 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 64
+2021-01-10 11:26:29,017 [INFO] train: Epoch: [64][  0/195]	Time  0.421 ( 0.421)	Data  0.268 ( 0.268)	Loss 0.227 (0.227)	Acc@1  91.41 ( 91.41)	Acc@5 100.00 (100.00)
+2021-01-10 11:26:39,196 [INFO] train: Epoch: [64][194/195]	Time  0.021 ( 0.054)	Data  0.000 ( 0.017)	Loss 0.236 (0.338)	Acc@1  92.19 ( 89.19)	Acc@5 100.00 ( 99.31)
+2021-01-10 11:26:39,258 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 65
+2021-01-10 11:26:39,687 [INFO] train: Epoch: [65][  0/195]	Time  0.429 ( 0.429)	Data  0.350 ( 0.350)	Loss 0.273 (0.273)	Acc@1  92.19 ( 92.19)	Acc@5 100.00 (100.00)
+2021-01-10 11:26:50,117 [INFO] train: Epoch: [65][194/195]	Time  0.022 ( 0.056)	Data  0.000 ( 0.010)	Loss 0.221 (0.328)	Acc@1  91.41 ( 89.50)	Acc@5  99.22 ( 99.37)
+2021-01-10 11:26:50,316 [INFO] train: Test: [ 0/39]	Time  0.141 ( 0.141)	Loss 0.278 (0.278)	Acc@1  91.80 ( 91.80)	Acc@5  98.83 ( 98.83)
+2021-01-10 11:26:51,358 [INFO] train: Test: [39/39]	Time  0.026 ( 0.029)	Loss 0.317 (0.294)	Acc@1  89.84 ( 90.13)	Acc@5  99.61 ( 99.53)
+2021-01-10 11:26:51,359 [INFO] train: ==> best 90.13 saving at /mnt/data/checkpoints/simsiam/CLS_CIFAR10_SimSiam_e90_SGD_PRE_CIFAR10_SimSiam_resnet18_lr0_06_e800_bz512_NG4_default/gpu_0/0000/checkpoints/model_best.pth
+2021-01-10 11:26:51,778 [INFO] train: ==> ETA: 0:04:49	GPU-M: 1846.5625	GPU-U: 0
+2021-01-10 11:26:51,778 [INFO] train: Overall Timing[65/1]	epoch_time 0.3864 (0.3834)	validation_time 0.0197 (0.0200)	train_time 0.1819 (0.1805)
+2021-01-10 11:26:51,780 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 66
+2021-01-10 11:26:52,157 [INFO] train: Epoch: [66][  0/195]	Time  0.376 ( 0.376)	Data  0.351 ( 0.351)	Loss 0.221 (0.221)	Acc@1  93.75 ( 93.75)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:27:02,526 [INFO] train: Epoch: [66][194/195]	Time  0.020 ( 0.055)	Data  0.000 ( 0.016)	Loss 0.311 (0.323)	Acc@1  90.62 ( 89.92)	Acc@5  99.22 ( 99.34)
+2021-01-10 11:27:02,591 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 67
+2021-01-10 11:27:02,978 [INFO] train: Epoch: [67][  0/195]	Time  0.386 ( 0.386)	Data  0.271 ( 0.271)	Loss 0.445 (0.445)	Acc@1  85.16 ( 85.16)	Acc@5 100.00 (100.00)
+2021-01-10 11:27:13,528 [INFO] train: Epoch: [67][194/195]	Time  0.020 ( 0.056)	Data  0.000 ( 0.005)	Loss 0.258 (0.328)	Acc@1  90.62 ( 89.60)	Acc@5 100.00 ( 99.38)
+2021-01-10 11:27:13,731 [INFO] train: Test: [ 0/39]	Time  0.143 ( 0.143)	Loss 0.262 (0.262)	Acc@1  92.97 ( 92.97)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:27:14,775 [INFO] train: Test: [39/39]	Time  0.026 ( 0.029)	Loss 0.332 (0.299)	Acc@1  88.28 ( 90.04)	Acc@5  99.61 ( 99.51)
+2021-01-10 11:27:14,871 [INFO] train: ==> ETA: 0:04:25	GPU-M: 1846.5625	GPU-U: 99
+2021-01-10 11:27:14,871 [INFO] train: Overall Timing[67/1]	epoch_time 0.3849 (0.3835)	validation_time 0.0198 (0.0200)	train_time 0.1833 (0.1805)
+2021-01-10 11:27:14,872 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 68
+2021-01-10 11:27:15,257 [INFO] train: Epoch: [68][  0/195]	Time  0.385 ( 0.385)	Data  0.347 ( 0.347)	Loss 0.416 (0.416)	Acc@1  90.62 ( 90.62)	Acc@5  97.66 ( 97.66)
+2021-01-10 11:27:25,675 [INFO] train: Epoch: [68][194/195]	Time  0.021 ( 0.055)	Data  0.001 ( 0.003)	Loss 0.206 (0.318)	Acc@1  93.75 ( 89.91)	Acc@5 100.00 ( 99.35)
+2021-01-10 11:27:25,737 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 69
+2021-01-10 11:27:26,186 [INFO] train: Epoch: [69][  0/195]	Time  0.448 ( 0.448)	Data  0.290 ( 0.290)	Loss 0.208 (0.208)	Acc@1  95.31 ( 95.31)	Acc@5 100.00 (100.00)
+2021-01-10 11:27:36,405 [INFO] train: Epoch: [69][194/195]	Time  0.021 ( 0.055)	Data  0.000 ( 0.009)	Loss 0.247 (0.324)	Acc@1  93.75 ( 89.51)	Acc@5  99.22 ( 99.38)
+2021-01-10 11:27:36,589 [INFO] train: Test: [ 0/39]	Time  0.137 ( 0.137)	Loss 0.278 (0.278)	Acc@1  90.62 ( 90.62)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:27:37,630 [INFO] train: Test: [39/39]	Time  0.026 ( 0.029)	Loss 0.339 (0.301)	Acc@1  88.28 ( 89.81)	Acc@5  99.61 ( 99.59)
+2021-01-10 11:27:37,723 [INFO] train: ==> ETA: 0:03:59	GPU-M: 1846.5625	GPU-U: 49
+2021-01-10 11:27:37,723 [INFO] train: Overall Timing[69/1]	epoch_time 0.3809 (0.3834)	validation_time 0.0197 (0.0200)	train_time 0.1786 (0.1805)
+2021-01-10 11:27:37,724 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 70
+2021-01-10 11:27:38,093 [INFO] train: Epoch: [70][  0/195]	Time  0.368 ( 0.368)	Data  0.345 ( 0.345)	Loss 0.245 (0.245)	Acc@1  92.97 ( 92.97)	Acc@5 100.00 (100.00)
+2021-01-10 11:27:48,477 [INFO] train: Epoch: [70][194/195]	Time  0.064 ( 0.055)	Data  0.041 ( 0.006)	Loss 0.297 (0.326)	Acc@1  90.62 ( 89.54)	Acc@5 100.00 ( 99.38)
+2021-01-10 11:27:48,542 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 71
+2021-01-10 11:27:48,935 [INFO] train: Epoch: [71][  0/195]	Time  0.392 ( 0.392)	Data  0.275 ( 0.275)	Loss 0.321 (0.321)	Acc@1  90.62 ( 90.62)	Acc@5 100.00 (100.00)
+2021-01-10 11:27:59,320 [INFO] train: Epoch: [71][194/195]	Time  0.062 ( 0.055)	Data  0.038 ( 0.023)	Loss 0.285 (0.325)	Acc@1  90.62 ( 89.72)	Acc@5  99.22 ( 99.34)
+2021-01-10 11:27:59,539 [INFO] train: Test: [ 0/39]	Time  0.160 ( 0.160)	Loss 0.263 (0.263)	Acc@1  92.97 ( 92.97)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:28:00,581 [INFO] train: Test: [39/39]	Time  0.026 ( 0.030)	Loss 0.321 (0.295)	Acc@1  89.06 ( 90.15)	Acc@5  99.61 ( 99.60)
+2021-01-10 11:28:00,582 [INFO] train: ==> best 90.15 saving at /mnt/data/checkpoints/simsiam/CLS_CIFAR10_SimSiam_e90_SGD_PRE_CIFAR10_SimSiam_resnet18_lr0_06_e800_bz512_NG4_default/gpu_0/0000/checkpoints/model_best.pth
+2021-01-10 11:28:01,037 [INFO] train: ==> ETA: 0:03:41	GPU-M: 1846.5625	GPU-U: 0
+2021-01-10 11:28:01,037 [INFO] train: Overall Timing[71/1]	epoch_time 0.3886 (0.3835)	validation_time 0.0201 (0.0200)	train_time 0.1806 (0.1805)
+2021-01-10 11:28:01,038 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 72
+2021-01-10 11:28:01,419 [INFO] train: Epoch: [72][  0/195]	Time  0.380 ( 0.380)	Data  0.357 ( 0.357)	Loss 0.209 (0.209)	Acc@1  92.19 ( 92.19)	Acc@5 100.00 (100.00)
+2021-01-10 11:28:11,500 [INFO] train: Epoch: [72][194/195]	Time  0.019 ( 0.054)	Data  0.000 ( 0.018)	Loss 0.377 (0.308)	Acc@1  89.06 ( 89.97)	Acc@5  99.22 ( 99.50)
+2021-01-10 11:28:11,561 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 73
+2021-01-10 11:28:11,957 [INFO] train: Epoch: [73][  0/195]	Time  0.395 ( 0.395)	Data  0.348 ( 0.348)	Loss 0.371 (0.371)	Acc@1  87.50 ( 87.50)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:28:22,079 [INFO] train: Epoch: [73][194/195]	Time  0.086 ( 0.054)	Data  0.062 ( 0.021)	Loss 0.218 (0.323)	Acc@1  95.31 ( 89.56)	Acc@5 100.00 ( 99.35)
+2021-01-10 11:28:22,293 [INFO] train: Test: [ 0/39]	Time  0.153 ( 0.153)	Loss 0.264 (0.264)	Acc@1  91.80 ( 91.80)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:28:23,351 [INFO] train: Test: [39/39]	Time  0.026 ( 0.030)	Loss 0.327 (0.296)	Acc@1  88.67 ( 90.02)	Acc@5  99.61 ( 99.53)
+2021-01-10 11:28:23,424 [INFO] train: ==> ETA: 0:03:10	GPU-M: 1846.5625	GPU-U: 51
+2021-01-10 11:28:23,424 [INFO] train: Overall Timing[73/1]	epoch_time 0.3731 (0.3832)	validation_time 0.0202 (0.0200)	train_time 0.1763 (0.1804)
+2021-01-10 11:28:23,425 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 74
+2021-01-10 11:28:23,861 [INFO] train: Epoch: [74][  0/195]	Time  0.435 ( 0.435)	Data  0.348 ( 0.348)	Loss 0.183 (0.183)	Acc@1  94.53 ( 94.53)	Acc@5 100.00 (100.00)
+2021-01-10 11:28:33,929 [INFO] train: Epoch: [74][194/195]	Time  0.048 ( 0.054)	Data  0.000 ( 0.015)	Loss 0.309 (0.321)	Acc@1  89.84 ( 89.73)	Acc@5  99.22 ( 99.40)
+2021-01-10 11:28:34,000 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 75
+2021-01-10 11:28:34,381 [INFO] train: Epoch: [75][  0/195]	Time  0.380 ( 0.380)	Data  0.354 ( 0.354)	Loss 0.352 (0.352)	Acc@1  88.28 ( 88.28)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:28:44,958 [INFO] train: Epoch: [75][194/195]	Time  0.079 ( 0.056)	Data  0.000 ( 0.008)	Loss 0.294 (0.316)	Acc@1  89.84 ( 90.09)	Acc@5 100.00 ( 99.46)
+2021-01-10 11:28:45,160 [INFO] train: Test: [ 0/39]	Time  0.145 ( 0.145)	Loss 0.267 (0.267)	Acc@1  90.62 ( 90.62)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:28:46,202 [INFO] train: Test: [39/39]	Time  0.026 ( 0.029)	Loss 0.327 (0.295)	Acc@1  89.84 ( 90.14)	Acc@5  99.61 ( 99.59)
+2021-01-10 11:28:46,304 [INFO] train: ==> ETA: 0:02:51	GPU-M: 1846.5625	GPU-U: 22
+2021-01-10 11:28:46,304 [INFO] train: Overall Timing[75/1]	epoch_time 0.3813 (0.3832)	validation_time 0.0198 (0.0200)	train_time 0.1836 (0.1804)
+2021-01-10 11:28:46,305 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 76
+2021-01-10 11:28:46,774 [INFO] train: Epoch: [76][  0/195]	Time  0.468 ( 0.468)	Data  0.277 ( 0.277)	Loss 0.302 (0.302)	Acc@1  90.62 ( 90.62)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:28:57,125 [INFO] train: Epoch: [76][194/195]	Time  0.085 ( 0.055)	Data  0.000 ( 0.005)	Loss 0.449 (0.323)	Acc@1  81.25 ( 89.63)	Acc@5  99.22 ( 99.36)
+2021-01-10 11:28:57,178 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 77
+2021-01-10 11:28:57,539 [INFO] train: Epoch: [77][  0/195]	Time  0.360 ( 0.360)	Data  0.263 ( 0.263)	Loss 0.370 (0.370)	Acc@1  86.72 ( 86.72)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:29:07,961 [INFO] train: Epoch: [77][194/195]	Time  0.021 ( 0.055)	Data  0.000 ( 0.025)	Loss 0.257 (0.323)	Acc@1  89.84 ( 89.52)	Acc@5  99.22 ( 99.40)
+2021-01-10 11:29:08,165 [INFO] train: Test: [ 0/39]	Time  0.139 ( 0.139)	Loss 0.265 (0.265)	Acc@1  92.58 ( 92.58)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:29:09,212 [INFO] train: Test: [39/39]	Time  0.026 ( 0.029)	Loss 0.323 (0.293)	Acc@1  89.06 ( 90.16)	Acc@5  99.61 ( 99.61)
+2021-01-10 11:29:09,213 [INFO] train: ==> best 90.16 saving at /mnt/data/checkpoints/simsiam/CLS_CIFAR10_SimSiam_e90_SGD_PRE_CIFAR10_SimSiam_resnet18_lr0_06_e800_bz512_NG4_default/gpu_0/0000/checkpoints/model_best.pth
+2021-01-10 11:29:09,665 [INFO] train: ==> ETA: 0:02:31	GPU-M: 1846.5625	GPU-U: 0
+2021-01-10 11:29:09,665 [INFO] train: Overall Timing[77/1]	epoch_time 0.3893 (0.3834)	validation_time 0.0198 (0.0200)	train_time 0.1808 (0.1804)
+2021-01-10 11:29:09,666 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 78
+2021-01-10 11:29:10,055 [INFO] train: Epoch: [78][  0/195]	Time  0.387 ( 0.387)	Data  0.361 ( 0.361)	Loss 0.371 (0.371)	Acc@1  89.06 ( 89.06)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:29:20,649 [INFO] train: Epoch: [78][194/195]	Time  0.076 ( 0.056)	Data  0.053 ( 0.034)	Loss 0.280 (0.316)	Acc@1  91.41 ( 89.85)	Acc@5 100.00 ( 99.34)
+2021-01-10 11:29:20,712 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 79
+2021-01-10 11:29:21,161 [INFO] train: Epoch: [79][  0/195]	Time  0.447 ( 0.447)	Data  0.361 ( 0.361)	Loss 0.352 (0.352)	Acc@1  89.84 ( 89.84)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:29:31,374 [INFO] train: Epoch: [79][194/195]	Time  0.019 ( 0.055)	Data  0.000 ( 0.009)	Loss 0.249 (0.319)	Acc@1  91.41 ( 89.58)	Acc@5 100.00 ( 99.42)
+2021-01-10 11:29:31,577 [INFO] train: Test: [ 0/39]	Time  0.152 ( 0.152)	Loss 0.268 (0.268)	Acc@1  92.19 ( 92.19)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:29:32,619 [INFO] train: Test: [39/39]	Time  0.026 ( 0.030)	Loss 0.319 (0.296)	Acc@1  89.84 ( 90.09)	Acc@5  99.61 ( 99.60)
+2021-01-10 11:29:32,715 [INFO] train: ==> ETA: 0:02:06	GPU-M: 1846.5625	GPU-U: 55
+2021-01-10 11:29:32,715 [INFO] train: Overall Timing[79/1]	epoch_time 0.3842 (0.3834)	validation_time 0.0199 (0.0200)	train_time 0.1785 (0.1804)
+2021-01-10 11:29:32,716 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 80
+2021-01-10 11:29:33,153 [INFO] train: Epoch: [80][  0/195]	Time  0.436 ( 0.436)	Data  0.353 ( 0.353)	Loss 0.362 (0.362)	Acc@1  89.84 ( 89.84)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:29:43,671 [INFO] train: Epoch: [80][194/195]	Time  0.050 ( 0.056)	Data  0.027 ( 0.010)	Loss 0.318 (0.318)	Acc@1  89.84 ( 89.73)	Acc@5  99.22 ( 99.37)
+2021-01-10 11:29:43,734 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 81
+2021-01-10 11:29:44,203 [INFO] train: Epoch: [81][  0/195]	Time  0.468 ( 0.468)	Data  0.296 ( 0.296)	Loss 0.297 (0.297)	Acc@1  91.41 ( 91.41)	Acc@5  98.44 ( 98.44)
+2021-01-10 11:29:54,509 [INFO] train: Epoch: [81][194/195]	Time  0.019 ( 0.055)	Data  0.000 ( 0.011)	Loss 0.238 (0.326)	Acc@1  91.41 ( 89.61)	Acc@5 100.00 ( 99.41)
+2021-01-10 11:29:54,729 [INFO] train: Test: [ 0/39]	Time  0.163 ( 0.163)	Loss 0.267 (0.267)	Acc@1  91.41 ( 91.41)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:29:55,772 [INFO] train: Test: [39/39]	Time  0.026 ( 0.030)	Loss 0.315 (0.292)	Acc@1  89.06 ( 90.35)	Acc@5  99.61 ( 99.64)
+2021-01-10 11:29:55,773 [INFO] train: ==> best 90.35 saving at /mnt/data/checkpoints/simsiam/CLS_CIFAR10_SimSiam_e90_SGD_PRE_CIFAR10_SimSiam_resnet18_lr0_06_e800_bz512_NG4_default/gpu_0/0000/checkpoints/model_best.pth
+2021-01-10 11:29:56,155 [INFO] train: ==> ETA: 0:01:45	GPU-M: 1846.5625	GPU-U: 0
+2021-01-10 11:29:56,155 [INFO] train: Overall Timing[81/1]	epoch_time 0.3907 (0.3836)	validation_time 0.0201 (0.0200)	train_time 0.1805 (0.1804)
+2021-01-10 11:29:56,157 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 82
+2021-01-10 11:29:56,584 [INFO] train: Epoch: [82][  0/195]	Time  0.427 ( 0.427)	Data  0.296 ( 0.296)	Loss 0.231 (0.231)	Acc@1  91.41 ( 91.41)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:30:06,704 [INFO] train: Epoch: [82][194/195]	Time  0.041 ( 0.054)	Data  0.020 ( 0.028)	Loss 0.289 (0.319)	Acc@1  89.84 ( 89.80)	Acc@5 100.00 ( 99.47)
+2021-01-10 11:30:06,771 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 83
+2021-01-10 11:30:07,138 [INFO] train: Epoch: [83][  0/195]	Time  0.366 ( 0.366)	Data  0.342 ( 0.342)	Loss 0.361 (0.361)	Acc@1  89.84 ( 89.84)	Acc@5 100.00 (100.00)
+2021-01-10 11:30:17,521 [INFO] train: Epoch: [83][194/195]	Time  0.048 ( 0.055)	Data  0.025 ( 0.009)	Loss 0.314 (0.319)	Acc@1  90.62 ( 89.85)	Acc@5  99.22 ( 99.45)
+2021-01-10 11:30:17,742 [INFO] train: Test: [ 0/39]	Time  0.151 ( 0.151)	Loss 0.262 (0.262)	Acc@1  91.41 ( 91.41)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:30:18,786 [INFO] train: Test: [39/39]	Time  0.026 ( 0.029)	Loss 0.319 (0.291)	Acc@1  89.06 ( 90.20)	Acc@5  99.61 ( 99.61)
+2021-01-10 11:30:18,869 [INFO] train: ==> ETA: 0:01:19	GPU-M: 1846.5625	GPU-U: 37
+2021-01-10 11:30:18,869 [INFO] train: Overall Timing[83/1]	epoch_time 0.3786 (0.3834)	validation_time 0.0199 (0.0200)	train_time 0.1803 (0.1804)
+2021-01-10 11:30:18,870 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 84
+2021-01-10 11:30:19,248 [INFO] train: Epoch: [84][  0/195]	Time  0.377 ( 0.377)	Data  0.286 ( 0.286)	Loss 0.198 (0.198)	Acc@1  92.97 ( 92.97)	Acc@5 100.00 (100.00)
+2021-01-10 11:30:29,769 [INFO] train: Epoch: [84][194/195]	Time  0.021 ( 0.056)	Data  0.000 ( 0.026)	Loss 0.321 (0.312)	Acc@1  89.06 ( 90.22)	Acc@5  99.22 ( 99.35)
+2021-01-10 11:30:29,826 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 85
+2021-01-10 11:30:30,214 [INFO] train: Epoch: [85][  0/195]	Time  0.387 ( 0.387)	Data  0.362 ( 0.362)	Loss 0.293 (0.293)	Acc@1  87.50 ( 87.50)	Acc@5 100.00 (100.00)
+2021-01-10 11:30:40,560 [INFO] train: Epoch: [85][194/195]	Time  0.020 ( 0.055)	Data  0.000 ( 0.011)	Loss 0.276 (0.324)	Acc@1  91.41 ( 89.64)	Acc@5  99.22 ( 99.42)
+2021-01-10 11:30:40,769 [INFO] train: Test: [ 0/39]	Time  0.148 ( 0.148)	Loss 0.265 (0.265)	Acc@1  91.80 ( 91.80)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:30:41,813 [INFO] train: Test: [39/39]	Time  0.026 ( 0.029)	Loss 0.319 (0.292)	Acc@1  89.45 ( 90.28)	Acc@5  99.61 ( 99.62)
+2021-01-10 11:30:41,902 [INFO] train: ==> ETA: 0:00:57	GPU-M: 1846.5625	GPU-U: 99
+2021-01-10 11:30:41,902 [INFO] train: Overall Timing[85/1]	epoch_time 0.3839 (0.3834)	validation_time 0.0199 (0.0200)	train_time 0.1799 (0.1804)
+2021-01-10 11:30:41,903 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 86
+2021-01-10 11:30:42,343 [INFO] train: Epoch: [86][  0/195]	Time  0.439 ( 0.439)	Data  0.268 ( 0.268)	Loss 0.393 (0.393)	Acc@1  89.84 ( 89.84)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:30:52,922 [INFO] train: Epoch: [86][194/195]	Time  0.019 ( 0.056)	Data  0.000 ( 0.002)	Loss 0.221 (0.315)	Acc@1  92.97 ( 89.79)	Acc@5 100.00 ( 99.42)
+2021-01-10 11:30:52,985 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 87
+2021-01-10 11:30:53,349 [INFO] train: Epoch: [87][  0/195]	Time  0.363 ( 0.363)	Data  0.268 ( 0.268)	Loss 0.192 (0.192)	Acc@1  94.53 ( 94.53)	Acc@5 100.00 (100.00)
+2021-01-10 11:31:03,598 [INFO] train: Epoch: [87][194/195]	Time  0.019 ( 0.054)	Data  0.000 ( 0.010)	Loss 0.423 (0.317)	Acc@1  85.94 ( 89.85)	Acc@5  98.44 ( 99.44)
+2021-01-10 11:31:03,810 [INFO] train: Test: [ 0/39]	Time  0.152 ( 0.152)	Loss 0.261 (0.261)	Acc@1  91.80 ( 91.80)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:31:04,854 [INFO] train: Test: [39/39]	Time  0.026 ( 0.030)	Loss 0.321 (0.291)	Acc@1  88.67 ( 90.36)	Acc@5  99.61 ( 99.61)
+2021-01-10 11:31:04,855 [INFO] train: ==> best 90.36 saving at /mnt/data/checkpoints/simsiam/CLS_CIFAR10_SimSiam_e90_SGD_PRE_CIFAR10_SimSiam_resnet18_lr0_06_e800_bz512_NG4_default/gpu_0/0000/checkpoints/model_best.pth
+2021-01-10 11:31:05,165 [INFO] train: ==> ETA: 0:00:34	GPU-M: 1846.5625	GPU-U: 1
+2021-01-10 11:31:05,165 [INFO] train: Overall Timing[87/1]	epoch_time 0.3877 (0.3835)	validation_time 0.0200 (0.0200)	train_time 0.1779 (0.1804)
+2021-01-10 11:31:05,167 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 88
+2021-01-10 11:31:05,533 [INFO] train: Epoch: [88][  0/195]	Time  0.366 ( 0.366)	Data  0.341 ( 0.341)	Loss 0.324 (0.324)	Acc@1  89.84 ( 89.84)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:31:15,903 [INFO] train: Epoch: [88][194/195]	Time  0.020 ( 0.055)	Data  0.000 ( 0.016)	Loss 0.351 (0.324)	Acc@1  89.84 ( 89.57)	Acc@5 100.00 ( 99.38)
+2021-01-10 11:31:15,967 [INFO] train: Model conv 1 -0.43966197967529297 at epoch 89
+2021-01-10 11:31:16,425 [INFO] train: Epoch: [89][  0/195]	Time  0.457 ( 0.457)	Data  0.279 ( 0.279)	Loss 0.395 (0.395)	Acc@1  88.28 ( 88.28)	Acc@5  98.44 ( 98.44)
+2021-01-10 11:31:26,661 [INFO] train: Epoch: [89][194/195]	Time  0.022 ( 0.055)	Data  0.000 ( 0.023)	Loss 0.418 (0.315)	Acc@1  85.94 ( 89.86)	Acc@5 100.00 ( 99.44)
+2021-01-10 11:31:26,858 [INFO] train: Test: [ 0/39]	Time  0.145 ( 0.145)	Loss 0.262 (0.262)	Acc@1  91.80 ( 91.80)	Acc@5  99.22 ( 99.22)
+2021-01-10 11:31:27,902 [INFO] train: Test: [39/39]	Time  0.026 ( 0.029)	Loss 0.320 (0.292)	Acc@1  89.45 ( 90.27)	Acc@5  99.61 ( 99.61)
+2021-01-10 11:31:27,991 [INFO] train: ==> ETA: 0:00:11	GPU-M: 1846.5625	GPU-U: 38
+2021-01-10 11:31:27,991 [INFO] train: Overall Timing[89/1]	epoch_time 0.3804 (0.3835)	validation_time 0.0199 (0.0200)	train_time 0.1791 (0.1804)
