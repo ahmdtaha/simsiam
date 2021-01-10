@@ -38,7 +38,7 @@ The code logs the training progress in two files
 |                   | Paper [1] | Ours |
 |-------------------|------------|-------------|
 |     KNN Accracy     |![](./imgs/paper.jpg)|![](./imgs/pretrain_phase.jpg)|
-|     Linear Classifier     |91.1| TBA|
+|     Linear Classifier     |91.8| [90.27](https://github.com/ahmdtaha/simsiam/blob/main/sample_runs/complete_linear_classifier_run.txt) |
 
 
 ## Release History
