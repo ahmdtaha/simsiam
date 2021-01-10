@@ -104,7 +104,7 @@ def main(arg_num_threads=8,num_gpus=1):
     arg_arch = 'SimSiam'
     arg_backbone = 'resnet18'
 
-    arg_pretrained_model = '/mnt/data/checkpoints/self_supervised_baseline/PRE_CIFAR10_SimSiam_resnet18_lr0_06_e800_bz512_NG4_default/gpu_0/0000/checkpoints/epoch_0799.state'
+    arg_pretrained_model = '/mnt/data/checkpoints/simsiam/PRE_CIFAR10_SimSiam_resnet18_lr0_06_e800_bz512_NG4_default/gpu_0/0000/checkpoints/epoch_0799.state'
     assert os.path.exists(arg_pretrained_model), 'Please provide a valid pretrained model'
     exp_name_suffix = arg_pretrained_model.split('/')[5]
     arg_exp_name = 'CLS_{}_{}_e{}_{}/'.format(arg_dataset,
