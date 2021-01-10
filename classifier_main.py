@@ -98,7 +98,7 @@ def train_ddp(rank,cfg,return_dict):
 
     cleanup()
 
-def main(arg_num_threads=8,num_gpus=2):
+def main(arg_num_threads=8,num_gpus=1):
     arg_dataset = 'CIFAR10'
     arg_epochs = str(90)
     arg_arch = 'SimSiam'
@@ -156,31 +156,6 @@ def main(arg_num_threads=8,num_gpus=2):
     cfg = Config().parse(argv)
 
     assert cfg.epochs % 10 == 0 or 'debug' in cfg.name, 'Epoch should be divisible by 10'
-
-    original_name = cfg.name
-
-    username = getpass.getuser()
-    if username == 'ahmdtaha':  ## Make sure I am using first GPU on vulcan
-        cfg.gpu = 0
-        cfg.num_threads = arg_num_threads
-        cfg.logger.info('Using {} CPUs on Vulcan'.format(cfg.num_threads))
-        os.system("mkdir -p /scratch0/ahmdtaha/datasets")
-        os.system('ls /vulcanscratch/ahmdtaha/datasets')
-
-        if arg_dataset == 'CUB200':
-            os.system(
-                "/cfarhomes/ahmdtaha/code/msrsync/out -P -p16 /vulcanscratch/ahmdtaha/datasets/CUB_200_2011 /scratch0/ahmdtaha/datasets/")
-        elif arg_dataset == 'CIFAR10':
-
-            os.system(
-                "/cfarhomes/ahmdtaha/code/msrsync/out -P -p16 /vulcanscratch/ahmdtaha/datasets/cifar10 /scratch0/ahmdtaha/datasets/")
-        else:
-            raise NotImplemented('Invalid arg_dataset {}'.format(arg_dataset))
-    elif username == 'ataha':
-        if 'debug' in cfg.name:
-            cfg.num_threads = 0
-        else:
-            cfg.num_threads = 16
 
     spawn_train(cfg)
 
