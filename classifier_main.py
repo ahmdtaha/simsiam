@@ -138,7 +138,7 @@ def main(arg_num_threads=8,num_gpus=1):
         '--momentum', '0.9',
 
         # '--optimizer', 'lars',
-        # '--lr', '0.32',
+        # '--lr', '3.2',
         # '--batch_size', '4096',
 
         '--optimizer', 'sgd',
