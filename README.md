@@ -33,6 +33,7 @@ The code logs the training progress in two files
 * train_X.log: Assuming base_gpu=X, the file contains text log of the training progress. There are sample log files inside ./sample_runs dir. These are complete/incomplete runs.
 * exp_name.csv: This csv file keeps track of the KNN accuracy at each `--test_interval`
 
+To train simCLR model, change the [arch parameter](https://github.com/ahmdtaha/simsiam/blob/cd44e3c73b4b70029202f4277266f3b15e7e54f2/pretrain_main.py#L101) to `simCLR`. This code achieves 89.56% KNN accuracy with simCLR (check ./sample_runs dir).
 ### Quantitative Evaluation on CIFAR10
 
 |                   | Paper [1] | Ours |
@@ -47,8 +48,8 @@ The code logs the training progress in two files
 
 ### TODO LIST
 * Revise the readme file
-* Test pretrain_main.py with SimCLR
-* ~~Add the `classifier_main.py`~~
+* ~~Test pretrain_main.py with SimCLR~~
+* ~~Add the classifier_main.py~~
 
 ## References
 [1] Chen, Xinlei and He, Kaiming. Representation Learning by Learning to Count. arXiv preprint arXiv:2011.10566 
