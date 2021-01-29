@@ -164,5 +164,5 @@ if __name__ == '__main__':
     if len(sys.argv) == 1:
         main()
     else:
-        cfg = Config().parse()
+        cfg = Config().parse(None)
         spawn_train(cfg)
