@@ -4,3 +4,4 @@ nvidia-ml-py3
 tensorboard
 tqdm
 scikit-learn
+PyYAML
